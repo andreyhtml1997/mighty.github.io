@@ -1,0 +1,432 @@
+.invest_p {
+	padding-bottom: 8.125rem;
+}
+.invest_p .r_side {
+	width: 100%;
+}
+/* ------------------------------ */
+.invest_items {
+	margin-bottom: 6.25rem;
+}
+/* -------------------- */
+.invest_items .label {
+	margin-bottom: 4.6875rem;
+	opacity: 0.5;
+}
+/* ------------------------------ */
+.invest_form .form-group {
+  margin-bottom: 0;
+}
+/* -------------------- */
+.invest_info {
+	min-width: 20.625rem;
+}
+.invest_info .input_label {
+	margin-bottom: 0;
+}
+.invest_info .input_label,
+.invest_info .input_text {
+	
+}
+/* ------------------------------ */
+.invest_alert {
+	padding: 0.625rem 0.9375rem 0.625rem 1.25rem;
+	border: 0.125rem solid transparent;
+	
+	border-radius: 1.133rem;
+	font-size: 1.5rem;
+	min-width: 26rem;
+	line-height: 1;
+}
+.invest_alert .iconed_text {
+	justify-content: space-between;
+}
+.invest_alert .icon_width {
+	margin-left: 0.9375rem;
+	width: 2rem;
+}
+.invest_alert.red .icon_width .svg_fill {
+	fill: #f34079;
+}
+.invest_alert.red {
+	border-color: #f34079;
+	color: #f34079;
+}
+.invest_alert.white .icon_width .svg_fill {
+	fill: #ffffff;
+}
+.invest_alert.white {
+	border-color: #ffffff;
+	color: #ffffff;
+}
+.invest_alert.orange .icon_width .svg_fill {
+	fill: #ff7c18;
+}
+.invest_alert.orange {
+	border-color: #ff7c18;
+	color: #ff7c18;
+}
+/* ------------------------------ */
+.invest_confirm {
+	border: 0.125rem solid #555069;
+  background-color: transparent;
+	border-radius: 10px;
+	position: relative;
+  min-height: 6.75rem;
+  line-height: 1;
+  color: #fff;
+}
+/* -------------------- */
+.invest {
+	padding: 1.125rem 1.875rem 1.125rem 2.8125rem;
+	font-size: 2rem;
+	align-items: center;
+	flex-direction: row;
+	min-height: 6.5rem;
+	flex-wrap: wrap;
+	line-height: 1;
+	display: flex;
+}
+
+/* -------------------- */
+.invest .confirm_label {
+	
+	margin-right: auto;
+	padding: 1.25rem 0;
+	overflow: hidden;
+}
+/* -------------------- */
+.invest .confirm_message {
+	margin-right: 7.5rem;
+	white-space: nowrap;
+	align-items: center;
+	flex-wrap: nowrap;
+	display: flex;
+}
+.invest .confirm_message .input_label {
+	line-height: 1.25rem;
+	font-size: 1.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	color: #fff;
+}
+.invest .confirm_message .input_text {
+	font-family: inherit;
+	line-height: 2.5rem;
+	font-size: 2rem;
+}
+.invest .confirm_message .confirm_status {
+	margin-right: 2.5rem;
+	text-align: right;
+}
+.invest .confirm_message .confirm_link {
+	min-width: 23.4375rem;
+}
+.confirm_link a {
+	
+	text-decoration: underline;
+	max-width: 20.625rem;
+	font-size: 1.375rem;
+	line-height: 2.5rem;
+	overflow: hidden;
+	display: block;
+	color: #919dd1;
+}
+.confirm_link a:hover {
+	text-decoration: none;
+	opacity: 0.6;
+}
+.link_text {
+	
+	font-size: 1.375rem;
+	line-height: 2.5rem;
+	color: #80809b;
+}
+.invest.waiting .confirm_message .confirm_link .input_label,
+.invest.waiting .confirm_message .confirm_status .input_text {
+	color: #6f6ff4;
+}
+.invest.confirmed .confirm_message .confirm_link .input_label {
+	color: #fd9546;
+}
+.invest.confirmed .confirm_message .confirm_status .input_text {
+	color: #80809b;
+}
+.invest.recived .confirm_message .confirm_link .input_label,
+.invest.recived .confirm_message .confirm_status .input_text {
+	color: #69dd24;
+}
+/* -------------------- */
+.confirm_icon {
+	padding-bottom: 0.4375rem;
+	flex: none;
+}
+.confirm_icon .icon_width {
+	width: 3.3125rem;
+}
+/* -------------------- */
+.trans_invest {
+	padding: 1.125rem 2.8125rem;
+	font-size: 2rem;
+	align-items: center;
+	flex-direction: row;
+	min-height: 6.5rem;
+	flex-wrap: nowrap;
+	line-height: 1;
+	display: flex;
+}
+.trans_invest .input_label {
+	line-height: 1.25rem;
+	font-size: 1.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+.trans_invest .input_text {
+	line-height: 2.5rem;
+	font-size: 2rem;
+}
+.trans_amount {
+	align-items: center;
+	flex-direction: row;
+	margin-right: 5rem;
+	display: flex;
+}
+.trans_address {
+	align-items: center;
+	flex-direction: row;
+	overflow: hidden;
+	display: flex;
+}
+.trans_info {
+	margin-right: 2.5rem;
+	overflow: hidden;
+	flex-grow: 2;
+}
+.trans_invest .btn {
+	flex: none;
+}
+.trans_status {
+	padding-left: 2.5rem;
+	text-align: right;
+	margin-left: auto;
+}
+.trans_status .input_label {
+	color: #fff;
+}
+.trans_status .input_text {
+	color: #fd9546;
+}
+
+/* -------------------- */
+@media screen and (min-width: 768px) {
+	.invest_p {
+		padding-left: 4.0625rem;
+	}
+	.invest_form {
+		padding: 5rem 1.875rem 5rem 6.25rem;
+		/*max-width: 126.25rem;*/
+		width: 100%;
+	}
+	.inputs_width {
+		max-width: 78.667rem;
+		width: 100rem;
+	}
+	.invest_info {
+		padding: 1.375rem 4.375rem 1.1875rem;
+	}
+}
+@media screen and (max-width: 767px) {
+	.invest_p {
+		padding: 0 4.0625rem;
+	}
+	.invest_form {
+		padding: 0 0 5rem;
+		width: 100%;
+	}
+	.invest_info {
+		padding: 1.375rem 3.125rem 1.1875rem;
+	}
+	.invest .confirm_message .confirm_status {
+		text-align: left;
+	}
+}
+@media (min-width: 576px) and (max-width: 767px) {
+	.invest_form .withdraw_sum {
+		margin-bottom: 2.5rem;
+	}
+}
+@media screen and (max-width: 575px) {
+	.invest_form .withdraw_sum .input_double {
+		margin-bottom: 2.5rem;
+		max-width: 100%;
+	}
+	.invest .confirm_message .input_label {
+		width: 100%;
+	}
+	.invest .confirm_message {
+		margin-top: 0.625rem;
+		flex-wrap: wrap;
+	}
+	.trans_invest {
+		flex-wrap: wrap;
+	}
+	.trans_address {
+		margin-top: 0.625rem;
+	}
+}
+
+.invest.confirmed {
+	overflow:hidden;
+}
+
+#invest_cancel {
+	margin-left:1rem;
+	color:#fd9546;
+	cursor:pointer;
+	font-size:1.2rem;
+}
+
+.invest_info.principal_included {
+	padding:0 4.375rem;
+	height:100%;
+	display:flex;
+	align-items:center;
+	min-width:41.25rem;
+}
+
+.invest_info.principal_included .input_text {
+	white-space:nowrap;
+	font-size:1.125rem;
+	animation:blinkTwice 5s linear 1;
+	letter-spacing:0.15rem;
+}
+
+.invest_info.principal_included.noshow {
+	opacity:0;
+}
+
+@keyFrames blinkTwice {
+	0% {
+		opacity:1;
+	}
+	30% {
+		opacity:1;
+	}
+	40% {
+		opacity:0.3;
+	}
+	50% {
+		opacity:1;
+	}
+	60% {
+		opacity:0.3;
+	}
+	70% {
+		opacity:1;
+	}
+	80% {
+		opacity:0.3;
+	}
+	90% {
+		opacity:1;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.invest_info.principal_included {
+		padding-top:1rem;
+	}
+}
+
+.currency_warning {
+	padding-left:2rem;
+	color:#f34079;
+	font-size:1.3rem;
+	line-height:120%;
+}
+
+.currency_warning .warning {
+	animation:currencyWarning 1s linear infinite;
+}
+
+@keyFrames currencyWarning {
+	0% {
+		opacity:1;
+	}
+	40% {
+		opacity:1;
+	}
+	50% {
+		opacity:0;
+	}
+	90% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+.trans_amount.order-1 {
+	margin-right:0;
+}
+
+.invest_qr_ {
+	margin-left:4rem;
+}
+
+.invest_qr {
+	width:4rem;
+	height:auto;
+	border-radius:0.5rem;
+}
+
+@media screen and (max-width:299.999px) {
+	.invest_qr_ {
+		margin-left:4rem;
+		margin-right:0rem;
+	}
+}
+
+@media (min-width:300px) and (max-width:449.999px) {
+	.invest_qr_ {
+		margin-left:7rem;
+		margin-right:0rem;
+	}
+}
+
+@media (min-width:450px) and (max-width:599.999px) {
+	.invest_qr_ {
+		margin-left:3rem;
+		margin-right:0rem;
+	}
+}
+
+@media (min-width:600px) and (max-width:699.999px) {
+	.invest_qr_ {
+		margin-left:2rem;
+		margin-right:2rem;
+	}
+}
+
+@media (min-width:700px) and (max-width:899.999px) {
+	.invest_qr_ {
+		margin-left:4rem;
+		margin-right:2rem;
+	}
+}
+
+@media (min-width:900px) and (max-width:999.999px) {
+	.invest_qr_ {
+		margin-left:6rem;
+		margin-right:2rem;
+	}
+}
+
+@media screen and (min-width:1000px) {
+	.invest_qr_ {
+		margin-left:8rem;
+		margin-right:2rem;
+	}
+}
+

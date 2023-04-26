@@ -1,0 +1,139 @@
+.statistic_p {
+	padding-bottom: 8.125rem;
+	padding-left: 4.0625rem;
+}
+/* ------------------------------ */
+.statistic_p .r_side {
+	width: 100%;
+}
+/* ---------------------------------------- affiliate table */
+#stat_table {
+	max-width: 101.875rem;
+	white-space: nowrap;
+}
+/* -------------------- */
+#stat_table .table td:nth-child(4) a {
+	
+	text-decoration: underline;
+	overflow: hidden;
+	color: #919dd1;
+}
+#stat_table .table td:nth-child(4) a:hover {
+	text-decoration: none;
+	opacity: 0.6;
+}
+#stat_table .table td:nth-child(3) {
+	font-size: 2rem;
+}
+#stat_table .table td:nth-child(4),
+#stat_table .table td:nth-child(5) {
+	font-size: 1.5rem;
+}
+/* -------------------- */
+#stat_table .table td span.item {
+	min-height: 1.875rem;
+	display: block;
+	line-height: 1;
+}
+#stat_table .table td:nth-child(1) span.item,
+#stat_table .table td:nth-child(2) span.item {
+	padding-top: 0.375rem;
+}
+/* -------------------- */
+#stat_table .table td span.item .icon_width {
+	margin-left: 0.9375rem;
+	margin-top: -0.25rem;
+	width: 1.5rem;
+}
+
+.status_box_ {
+	display:block;
+	position:relative;
+}
+.status_box_ .cancel_withdrawal_button {
+	display:flex;
+	position:absolute;
+	margin:0;
+	left:3.7rem;
+	top:0;
+	bottom:0;
+	align-items:center;
+}
+
+.confirm_delete_operation_box_ {
+	font-size:1.6rem;
+	
+}
+
+.confirm_delete_buttons_ {
+	display:flex;
+	justify-content:space-between;
+}
+
+.confirm_delete_button {
+	max-width:47%;
+}
+
+.status_box_ .clock {
+	display:block;
+	min-width:13rem;
+}
+
+.cancel_withdrawal_button {
+	margin-left:5.4375rem !important;
+}
+
+.stats_amount_header {
+	color:#808080 !important;
+}
+
+.stats_amount_header.active {
+	color:#919dd1 !important;
+}
+
+.col_sum {
+	min-width:15rem !important;
+}
+
+.transaction_type_ {
+	border:0.125rem solid #555069;
+	border-radius:1rem;
+	padding:0.9375rem 1.5625rem;
+	cursor:pointer;
+	transition:0.3s;
+/*	margin:1.3rem 2.6rem 1.3rem 0 !important;*/
+}
+
+.transaction_type_ span {
+	color:#c0c0c0;
+	line-height:1;
+	letter-spacing:0.05rem;
+	transition:0.3s;
+}
+
+.transaction_type_.active {
+	border-color:#fff;
+}
+
+.transaction_type_.active span {
+	color:#ffa500;
+}
+
+.transaction_type_:hover {
+	border-color:#fff;
+}
+
+.transaction_type_:hover span {
+	color:#fff;
+}
+
+/* -------------------- */
+@media screen and (min-width: 768px) {
+	#stat_table {
+		padding-left: 2.1875rem;
+	}
+	
+	.cancel_withdrawal_button {
+		margin-left:6.4375rem !important;
+	}
+}

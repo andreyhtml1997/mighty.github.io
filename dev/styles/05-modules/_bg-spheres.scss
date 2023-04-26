@@ -1,0 +1,104 @@
+.bg-spheres {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg-sphere {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  //backdrop-filter: blur(30px);
+  &--color-main {
+    background: radial-gradient(ellipse at center, rgba(0,125,254,0.25) 0%, rgba(157,78,108,0) 68%, rgba(231,56,39,0) 100%);
+    
+    //background: url(../img/sphere-main.png) center no-repeat;
+    background-size: contain;
+  }
+  &--color-secondary {
+    background: radial-gradient(ellipse at center, rgba(194,65,255,0.25) 0%, rgba(219,59,108,0) 68%, rgba(231,56,39,0) 100%);
+    
+    //background: url(../img/sphere-secondary.png) center no-repeat;
+    background-size: contain;
+  }
+  &:nth-of-type(1) {
+    top: -300px;
+    left: -300px;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    top: 200px;
+    right: -200px;
+    -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+  }
+  &:nth-of-type(3) {
+    top: 600px;
+    left: 0px;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+  }
+  &:nth-of-type(4) {
+    top: 1600px;
+    left: 200px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation-delay: -1.5s;
+            animation-delay: -1.5s;
+  }
+  &:nth-of-type(5) {
+    top: 2500px;
+    right: -200px;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  &:nth-of-type(6) {
+    top: 2800px;
+    left: 0;
+    right: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+  }
+  &:nth-of-type(7) {
+    top: 3600px;
+    left: -400px;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+  }
+  &:nth-of-type(8) {
+    top: 3800px;
+    right: -400px;
+  }
+  &:nth-of-type(8) {
+    top: 3800px;
+    right: -400px;
+    -webkit-animation-delay: -1.5s;
+            animation-delay: -1.5s;
+  }
+  &:nth-of-type(9) {
+    top: 4300px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

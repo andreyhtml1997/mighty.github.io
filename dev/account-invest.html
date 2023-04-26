@@ -1,0 +1,191 @@
+<html 
+	data-wf-domain="www.aquax.pro" 
+	data-wf-page="605cf560c1c73e8fff95cfc8" 
+	data-wf-site="605cf560c1c73e1ee595cfc6" 
+	lang="en"
+>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Invest</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+	
+	
+	//= template/head.html
+	
+
+	//= template/account-styles.html
+	<link rel="stylesheet" href="libs/account/local/invest.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="styles/main.css">
+	
+</head>
+<body class="body">
+//= template/bg-spheres.html
+//= template/header-auth.html
+	<div class="page-wrapper">
+
+		<div id="ac_main">
+<main class="ac_content">
+
+			//= template/ac_navbar.html
+			<div class="ac_page">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/account">Personal account</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Create a deposit</li>
+					</ol>
+				</nav>
+
+				<div class="invest_p row no-gutters align-items-stretch ac_page__body">
+					<div class="r_side">
+						<h1>
+							Add new investment
+						</h1>
+
+						<div class="border_box">
+							<form method='post' action='/invest' name='invest'>
+								<div class="invest_form">
+
+
+	<input type='hidden' name='plan' value='YSDYuJN8O33TpCVEEekUEg==' id='invest_plan'>
+
+									<div class="invest_items">
+										<div class="label"><span class="cl_white">1. Select payment method</span></div>
+
+										<div class="row no-gutters">
+											<div class="col-12 col-lg-auto">
+												<div class='inputs_width'>
+													<div class="select_input form-group field_box_">
+														<select name='pay_system' id='invest_payment_system' class="simple-select">
+															<option value='YSDYuJN8O33TpCVEEekUEg==' selected>Bitcoin/BTC</option>
+															<option value='Tjq6hLmZYwt7eYedhw3WAg==' >TRC20/USDT</option>
+															<option value='bugrgMRZVEc1WJ9UfqxL7w==' >Tron/TRX</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-auto">
+												<div class="invest_info ps-md-0 ps-sm-0 ps-0">
+													<div class="invest_alert orange">
+														<div class="iconed_text">
+															<div class="text">Reinvest Manual Only!</div>
+															<div class="icon_width">
+																<svg viewBox="0 0 1600 1600" fill="none"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path class="svg_fill"
+																		d="M929.403 215.404C869.765 122.865 731.986 122.865 672.35 215.404L26.6322 1218.94C-39.17 1319.71 34.8593 1453.37 154.127 1453.37H1445.56C1566.89 1453.37 1638.87 1319.7 1573.06 1218.94L929.403 215.404ZM865.655 1186.04C865.655 1210.71 851.263 1223.06 828.636 1223.06H791.617C766.943 1223.06 754.598 1210.72 754.598 1186.04V1155.19C754.598 1130.52 766.935 1118.17 791.617 1118.17H828.636C853.31 1118.17 865.655 1132.56 865.655 1155.19V1186.04ZM859.483 1000.96C859.483 1025.63 845.091 1037.98 822.464 1037.98H795.727C773.108 1037.98 758.708 1025.64 758.708 1000.96L750.481 620.52C750.481 595.846 762.818 581.446 787.5 581.446H830.683C855.357 581.446 867.702 595.838 867.702 620.52L859.483 1000.96Z"
+																		fill="black" />
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="invest_items">
+										<div class="label"><span class="cl_white">2. Input the amount </span></div>
+
+										<div class="row no-gutters align-items-center">
+											<div class="col-12 col-lg-auto">
+												<div class="inputs_width">
+													<div class="double_inputs_block">
+														<div class="double_input_one field_box_">
+															<div class="double_icon">$</div>
+															<input type='text' name='amount_fiat' value='12' id='invest_amount_fiat' class='form-control sup_ field_' autocomplete='off'>
+														</div>
+
+														<div class="double_input_two">
+															<div class="double_icon">Min $<span id='invest_min_fiat_small'>12</span></div>
+
+															<input type='text' name='amount_crypto' value='0.00042528' id='invest_amount_crypto' class="form-control sup_ field_" autocomplete='off'>
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-auto">
+												<div class="invest_info">
+													<div class="input_label">1 <span id='invest_crypto_code'>BTC</span></div>
+													<div class="input_text" id='invest_rate'>$28216.7</div>
+												</div>
+											</div>
+
+											<div class="col-auto">
+												<div class="invest_info">
+													<div class="input_label">Min / Max</div>
+													<div class="input_text">
+														$<span id='invest_min_fiat'>12</span> -
+														<span id='invest_max_fiat'>30K</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="invest_items">
+										<div class="label"><span class="cl_white">3. Calculate your profit </span></div>
+
+										<div class="row no-gutters align-items-center">
+											<div class="col-12 col-lg-auto">
+												<div class="inputs_width">
+													<div class="double_inputs_block">
+
+														<div class="double_input_one field_box_">
+															<div class="double_icon">$</div>
+															
+															<div class="double_icon_">
+																DAILY
+															</div>
+															
+															<input type='text' value='1.44' id='invest_amount_daily' class='form-control' autocomplete='off'>
+														</div>
+
+														<div class="double_input_two">
+															<div class="double_icon">
+																Total
+															</div>
+															<input type='text' value='17.28' id='invest_amount_total' class="form-control" autocomplete='off'>
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<input type='hidden' id='invest_data' value='eyJwbGFuIjp7IllTRFl1Sk44TzMzVHBDVkVFZWtVRWc9PSI6eyJtaW4iOnsiZmlhdCI6MTJ9LCJtYXgiOnsiZmlhdCI6MzAwMDB9fX0sImN1cnJlbmN5Ijp7IllTRFl1Sk44TzMzVHBDVkVFZWtVRWc9PSI6eyJjb2RlIjp7ImNyeXB0byI6IkJUQyIsImZpYXQiOiJVU0QifSwic3ltYm9sIjp7ImNyeXB0byI6Ilx1MjBiZiIsImZpYXQiOiIkIn0sInJhdGUiOnsic3RyYWlnaHQiOiIwLjAwMDAzNTQ0IiwicmV2ZXJzZSI6MjgyMTYuNzA0Mjg4OTM5MDU0fSwiZGVjaW1hbCI6eyJjcnlwdG8iOiI4IiwiZmlhdCI6IjIifX0sIlRqcTZoTG1aWXd0N2VZZWRodzNXQWc9PSI6eyJjb2RlIjp7ImNyeXB0byI6IlVTRFQiLCJmaWF0IjoiVVNEIn0sInN5bWJvbCI6eyJjcnlwdG8iOiIkIiwiZmlhdCI6IiQifSwicmF0ZSI6eyJzdHJhaWdodCI6IjEiLCJyZXZlcnNlIjoxfSwiZGVjaW1hbCI6eyJjcnlwdG8iOiIyIiwiZmlhdCI6IjIifX0sImJ1Z3JnTVJaVkVjMVdKOVVmcXhMN3c9PSI6eyJjb2RlIjp7ImNyeXB0byI6IlRSWCIsImZpYXQiOiJVU0QifSwic3ltYm9sIjp7ImNyeXB0byI6IlQiLCJmaWF0IjoiJCJ9LCJyYXRlIjp7InN0cmFpZ2h0IjoiMTUuMTc5MSIsInJldmVyc2UiOjAuMDY1ODgwMDU4NzY1MDEyNDJ9LCJkZWNpbWFsIjp7ImNyeXB0byI6IjYiLCJmaWF0IjoiMiJ9fX19'>
+									
+									<button type="submit" class="btn_bordered raise" name='send' value='1'>
+										<span class="iconed_text">
+											<span class="text">Proceed to the payment</span>
+											<span class="icon_width">
+												<img src="img/account/btn-arrow-right.png" alt="Icon">
+											</span>
+										</span>
+									</button>
+
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+    </main>
+</div>
+
+		
+		//= template/footer.html
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	//= template/scripts.html
+	//= template/account-scripts.html
+	
+	<script src="libs/account/local/invest.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.navbar {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:before, &:after {
+      display: none;
+    }
+  }
+  .nav-logo-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .acc_logo_stats_ {
+    margin: auto;
+  }
+}
+
+.menu-button.account-menu-trigger {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+    z-index: 999;
+    width: 50px;
+    height: 100%;
+    padding: 0;
+    background-image: url(../img/menu-open.svg);
+    background-position: 100% 50%;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    &.active {
+      background-image: url(../img/menu-close.svg);
+    }
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+}
+
+.navbar-container  {
+  .head_user_box {
+    * {
+      -webkit-text-fill-color: white;
+    }
+  }
+}
+#ac_navbar {
+  .head_user_box {
+    padding-top: 20px;
+  }
+}

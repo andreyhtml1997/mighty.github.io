@@ -1,0 +1,65 @@
+.tabs-container {
+  margin-bottom: 0 !important;
+}
+
+
+
+
+
+.tab-container {
+
+}
+
+.tab-middle-container {
+
+}
+.tab-logos-container {
+  padding: 0;
+  height: 40px !important;
+  gap: 20px 0px;
+  @media(max-width: $xl){
+    height: 35px !important;
+  }
+  @media(max-width: $lg){
+    height: auto !important;
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  .tab-glow {
+
+  }
+  .tab-logo {
+    height: 100%;
+    object-fit: contain;
+    @media(max-width: $xl){
+      
+    }
+    @media(max-width: $lg){
+      height: 30px;
+    }
+    @media(max-width: $md){
+      width: calc(100%/3);
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      width: calc(100%/2);
+    }
+    
+  }
+}
+
+
+
+
+.p-codec.p-tabs {
+  text-align: justify;
+}

@@ -1,0 +1,146 @@
+.withdraw_p {
+	padding-bottom: 8.125rem;
+}
+.withdraw_p .r_side {
+	width: 100%;
+}
+/* ------------------------------ */
+.withdraw_form .form-group {
+	margin-bottom: 0;
+}
+/* -------------------- */
+.withdraw_items {
+	margin-bottom: 6.25rem;
+}
+/* -------------------- */
+.withdraw_items .label {
+	margin-bottom: 4.6875rem;
+	opacity: 0.5;
+}
+.withdraw_items .label.opaque {
+	opacity: 1;
+	letter-spacing:0.1rem;
+}
+
+.settings_label {
+	position: relative;
+}
+/* -------------------- */
+.withdraw_info {
+	min-width: 20.625rem;
+}
+.withdraw_info .input_label {
+	margin-bottom: 0;
+}
+.withdraw_info .input_label,
+.withdraw_info .input_text {
+	
+}
+/* -------------------- */
+.withdraw_confirm {
+	border: 0.125rem solid #555069;
+  border-radius: 10px;
+  min-height: 6.75rem;
+  padding: 0 1rem;
+}
+.withdraw_confirm .input_label {
+	margin-bottom: 0;
+}
+.withdraw_date {
+	padding: 1.125rem 2.8125rem;
+	width: 33.75rem;
+}
+.withdraw_wallet {
+	padding: 1.125rem 2.8125rem;
+}
+
+.btn_bordered .text {
+	width:25rem;
+	text-align:left;
+}
+
+.show_on_error {
+	display:none;
+}
+
+.back_box_ {
+	position:relative;
+	display:inline-block;
+}
+
+.rev_withdrawals_button {
+	display:block;
+	text-align:center;
+	margin-top:3rem;
+	font-size:2rem;
+}
+
+.plus_weekend {
+	
+	font-size:1.2rem;
+	position:absolute;
+	left:9rem;
+	top:3.15rem;
+}
+
+.withdraw_date_time {
+	animation:blinkWaiting 1s 5 linear;
+}
+
+#time_till_pay {
+	display:inline-block; 
+	padding:1rem; 
+	background-color:#f34079; 
+	color:#fff; 
+	border-radius:0.5rem;
+	min-width:11rem;
+	text-align:center;
+	line-height:1;
+}
+
+/* -------------------- */
+@media screen and (min-width: 768px) {
+	.withdraw_p {
+		padding-left: 4.0625rem;
+	}
+	.withdraw_form {
+		padding: 5rem 1.875rem 5rem 6.25rem;
+		/*max-width: 107.8125rem;*/
+		width: 100%;
+	}
+	.withdraw_info {
+		padding: 1.375rem 4.375rem 1.1875rem;
+	}
+	.pincode_item,
+	.withdraw_confirm {
+		max-width: 101.333rem;
+	}
+	.inputs_width {
+    max-width: 101.333rem;
+	}
+}
+@media screen and (min-width: 992px) {
+	.inputs_width {
+    max-width: 78.667rem;
+    width: 100rem;
+	}
+}
+@media screen and (max-width: 767px) {
+	.withdraw_p {
+		padding: 0 4.0625rem;
+	}
+	.withdraw_form {
+		padding: 0 0 5rem;
+		width: 100%;
+	}
+	.withdraw_date {
+		width: 22.75rem;
+	}
+	.withdraw_info {
+		padding: 1.375rem 3.125rem 1.1875rem;
+	}
+	
+	.plus_weekend {
+		left:8rem;
+	}
+}

@@ -1,0 +1,75 @@
+//
+// Fonts
+//
+// Import any fonts here, either locally or externally. For example:
+//
+// @import url("http://fonts.googleapis.com/css?family=Hind:400,700&subset=latin,latin-ext");
+// @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+//
+
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  src: url(../fonts/DMSans-Regular.ttf)
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  src: url(../fonts/DMSans-Medium.ttf)
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  src: url(../fonts/DMSans-Bold.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 200;
+  src: url(../fonts/Roboto-Thin.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 300;
+  src: url(../fonts/Roboto-Light.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  src: url(../fonts/Roboto-Medium.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 700;
+  src: url(../fonts/Roboto-Bold.ttf)
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 900;
+  src: url(../fonts/Roboto-Black.ttf)
+}
+
+@font-face {
+  font-family: Verdana;
+  font-weight: 400;
+  src: url(../fonts/Verdana.ttf)
+}
+
+@font-face {
+  font-family: Verdana;
+  font-weight: 700;
+  src: url(../fonts/Verdana-Bold.ttf)
+}

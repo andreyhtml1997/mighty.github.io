@@ -1,0 +1,256 @@
+<html 
+	data-wf-domain="www.aquax.pro" 
+	data-wf-page="605cf560c1c73e8fff95cfc8" 
+	data-wf-site="605cf560c1c73e1ee595cfc6" 
+	lang="en"
+>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Withdraw</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+	
+	
+	//= template/head.html
+	
+
+	//= template/account-styles.html
+	<link rel="stylesheet" href="libs/account/local/withdraw.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="styles/main.css">
+	
+</head>
+<body class="body">
+//= template/bg-spheres.html
+//= template/header-auth.html
+	<div class="page-wrapper">
+
+		<div id="ac_main">
+<main class="ac_content">
+
+			//= template/ac_navbar.html
+			<div class="ac_page">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/account">Personal account</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Withdraw 10800</li>
+					</ol>
+				</nav>
+
+				<div class="withdraw_p row no-gutters align-items-stretch ac_page__body">
+					<div class="r_side">
+						<h1>
+							Withdraw your funds
+						</h1>
+
+						<div class="border_box">
+							<form method='post' action='/withdraw' name='withdraw'>
+								<div class="withdraw_form">
+
+
+									<div class="withdraw_items">
+										<div class="label"><span class="cl_white">1. Select payment method</span></div>
+
+										<div class="row no-gutters">
+											<div class="col-12 col-lg-auto">
+												<div class="inputs_width">
+													<div class="select_input form-group field_box_">
+														<select class="simple-select" name='method' id='withdraw_method'>
+															<option value="YSDYuJN8O33TpCVEEekUEg==" selected>Bitcoin/BTC $0 / -0.00000015 BTC</option>
+															<option value="Tjq6hLmZYwt7eYedhw3WAg==" >TRC20/USDT $0 / 0 USDT</option>
+															<option value="bugrgMRZVEc1WJ9UfqxL7w==" >Tron/TRX $0 / 0 TRX</option>
+														</select>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="col-auto">
+												<div class="withdraw_info">
+													<div class="input_label">1 <span id='withdraw_currency_code'>BTC</span></div>
+													<div class="input_text">$<span id='withdraw_rate'>27344.82</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="withdraw_items">
+										<div class="label"><span class="cl_white">2. Input the amount </span></div>
+
+
+										<div class="row no-gutters">
+											<div class="col-12 col-lg-auto">
+												<div class="inputs_width">
+													<div class="double_inputs_block">
+
+														<div class="double_input_one">
+															<div class="form-group field_box_">
+																<div class="double_icon">$</div>
+
+																<input type='text' class="form-control sup_ field_" name='amount_fiat' id='withdraw_amount_fiat' value='-0' autocomplete='off'>
+															</div>
+														</div>
+
+														<div class="double_input_two">
+															<div class="form-group field_box_">
+																<div class="double_icon">Min $1</div>
+
+																<input type='text' class='form-control sup_ field_' name='amount_crypto' id='withdraw_amount_crypto' value='0.00003657' autocomplete='off'>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="col-auto">
+												<div class="withdraw_info">
+													<div class="input_label">Time to withdraw</div>
+													<div class='withdraw_timing active active_only input_text cl_red' timing='1'>
+														24H
+														<span class='cl_red plus_weekend'>+Weekend</span>
+													</div>
+													<div class='withdraw_timing  active_only input_text cl_red' timing='2'>
+														48H
+														<span class='cl_red plus_weekend'>+Weekend</span>
+													</div>
+													<div class='withdraw_timing  active_only input_text cl_red' timing='3'>
+														72H
+														<span class='cl_red plus_weekend'>+Weekend</span>
+													</div>
+													<div class='withdraw_timing  active_only input_text cl_red' timing='4'>
+														96H
+														<span class='cl_red plus_weekend'>+Weekend</span>
+													</div>
+												</div>
+											</div>
+										</div>  
+					  
+
+									</div>
+
+									<div class="withdraw_items">
+										<div class="label"><span class="cl_white">3. Confirm withdrawal</span></div>
+
+										<div class="withdraw_confirm">
+											<div class="row no-gutters align-items-center">
+												<div class="col-12 col-sm-auto">
+													<div class="withdraw_date">
+														<div class="input_label">Date of arrival</div>
+														
+
+														<div class="input_text withdraw_date_time active active_only" place='1'>
+															<span>24 Monday</span> <span class="cl_fiolet">13:38</span>
+														</div>
+														<div class="input_text withdraw_date_time  active_only" place='2'>
+															<span>25 Tuesday</span> <span class="cl_fiolet">13:38</span>
+														</div>
+														<div class="input_text withdraw_date_time  active_only" place='3'>
+															<span>26 Wednesday</span> <span class="cl_fiolet">13:38</span>
+														</div>
+														<div class="input_text withdraw_date_time  active_only" place='4'>
+															<span>27 Thursday</span> <span class="cl_fiolet">13:38</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="col">
+													<div class="withdraw_wallet field_box_">
+														<div class="input_label"><span id='withdraw_method_name'>Bitcoin</span> address</div>
+														<div class="input_text" id='withdraw_wallet'>34tRM**********mAvJA</div>
+													</div>
+												</div>
+
+												<div class="col-auto">
+													<a href='account-settings.html' class="btn btn-transparent">
+														Change
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="pincode_item">
+										<div class="row no-gutters align-items-center">
+											<!-- <div class="col-12 col-sm">
+												<div class="row no-gutters align-items-center">
+													<div class="col-auto">
+														<div class="settings_label">
+															2FA Code <span class='elhint master' hint='2fa'>?</span>
+															<div class='elhint slave' hint='2fa'>A 6-digit code from your Google Authenticator application</div>&nbsp;&nbsp;
+														</div>
+													</div>
+
+													<div class="col-auto">
+		<div class='g_auth_box' pin_box=''>
+			<input type='text' name='g_auth' value='' pin="5" class='g_auth_field form_control' autocomplete='off'>
+		</div>
+		
+													</div>
+													
+												</div>
+											</div> -->
+
+											<div class="col-auto">
+												<button type="submit" class="btn_bordered raise withdraw_check show_on_ok" el='submit_button' name='send' value='1'>
+													<span class="iconed_text">
+														<span class="text">Confirm Request</span>
+														<span class="icon_width">
+															<img src="img/account/btn-arrow-right.png" alt="Icon">
+														</span>
+													</span>
+												</button>
+												
+												<button class="btn_bordered anim withdraw_check show_on_error" el='below_minimum'>
+													<span class="iconed_text">
+														<span class="text">Min withdrawal $1</span>
+														<span class="icon_width">
+															<img src="img/account/btn-arrow-right.png" alt="Icon">
+														</span>
+													</span>
+												</button>
+												
+												<button class="btn_bordered anim withdraw_check show_on_error" el='above_balance'>
+													<span class="iconed_text">
+														<span class="text">Insufficient balance</span>
+														<span class="icon_width">
+															<img src="img/account/btn-arrow-right.png" alt="Icon">
+														</span>
+													</span>
+												</button>
+												
+												<button class="btn_bordered anim withdraw_check show_on_error" el='invalid_input'>
+													<span class="iconed_text">
+														<span class="text">Invalid inputs</span>
+														<span class="icon_width">
+															<img src="img/account/btn-arrow-right.png" alt="Icon">
+														</span>
+													</span>
+												</button>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+								
+								<input type='hidden' id='withdraw_data' value='eyJZU0RZdUpOOE8zM1RwQ1ZFRWVrVUVnPT0iOnsic3ltYm9sIjp7ImZpYXQiOiIkIiwiY3J5cHRvIjoiXHUyMGJmIn0sInRpY2tlciI6eyJmaWF0IjoiVVNEIiwiY3J5cHRvIjoiQlRDIn0sInJhdGUiOnsiZGlyZWN0IjoiMC4wMDAwMzY1NyIsInJldmVyc2UiOjI3MzQ0LjgxODE1Njk1OTI2fSwibmFtZSI6eyJmaWF0IjoiQml0Y29pbiIsImNyeXB0byI6IkJpdGNvaW4ifSwiY29pbm5hbWUiOnsiZmlhdCI6IlVTRCIsImNyeXB0byI6IkJpdGNvaW4ifSwiZGVjaW1hbCI6eyJmaWF0IjoiMiIsImNyeXB0byI6IjgifSwiYmFsYW5jZSI6eyJmaWF0IjoiMCIsImNyeXB0byI6Ii0wLjAwMDAwMDE1In0sIm1pbiI6eyJmaWF0IjoiMSIsImNyeXB0byI6IjAuMDAwMDM2NTcifSwid2FsbGV0IjoiMzR0Uk0qKioqKioqKioqbUF2SkEifSwiVGpxNmhMbVpZd3Q3ZVllZGh3M1dBZz09Ijp7InN5bWJvbCI6eyJmaWF0IjoiJCIsImNyeXB0byI6IiQifSwidGlja2VyIjp7ImZpYXQiOiJVU0QiLCJjcnlwdG8iOiJVU0RUIn0sInJhdGUiOnsiZGlyZWN0IjoiMSIsInJldmVyc2UiOjF9LCJuYW1lIjp7ImZpYXQiOiJCaXRjb2luIiwiY3J5cHRvIjoiVFJDMjAifSwiY29pbm5hbWUiOnsiZmlhdCI6IlVTRCIsImNyeXB0byI6IlVTRFQifSwiZGVjaW1hbCI6eyJmaWF0IjoiMiIsImNyeXB0byI6IjIifSwiYmFsYW5jZSI6eyJmaWF0IjoiMCIsImNyeXB0byI6IjAifSwibWluIjp7ImZpYXQiOiIxIiwiY3J5cHRvIjoiMSJ9LCJ3YWxsZXQiOiIifSwiYnVncmdNUlpWRWMxV0o5VWZxeEw3dz09Ijp7InN5bWJvbCI6eyJmaWF0IjoiJCIsImNyeXB0byI6IlQifSwidGlja2VyIjp7ImZpYXQiOiJVU0QiLCJjcnlwdG8iOiJUUlgifSwicmF0ZSI6eyJkaXJlY3QiOiIxNS4zMzc0IiwicmV2ZXJzZSI6MC4wNjUyMDAwOTkxMDQxNTA2M30sIm5hbWUiOnsiZmlhdCI6IkJpdGNvaW4iLCJjcnlwdG8iOiJUcm9uIn0sImNvaW5uYW1lIjp7ImZpYXQiOiJVU0QiLCJjcnlwdG8iOiJUcm9uIn0sImRlY2ltYWwiOnsiZmlhdCI6IjIiLCJjcnlwdG8iOiI2In0sImJhbGFuY2UiOnsiZmlhdCI6IjAiLCJjcnlwdG8iOiIwIn0sIm1pbiI6eyJmaWF0IjoiMSIsImNyeXB0byI6IjE1LjMzNzQifSwid2FsbGV0IjoiIn19' />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+    </main>
+</div>
+
+		
+		//= template/footer.html
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	//= template/scripts.html
+	//= template/account-scripts.html
+	<script src="libs/account/local/withdraw.js"></script>
+</body>
+</html>

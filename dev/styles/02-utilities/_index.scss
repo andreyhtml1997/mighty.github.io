@@ -1,0 +1,66 @@
+//
+// Utilities
+//
+// Import the basic utilities that other components in your project will require and
+// that don’t change. For example, color palettes, global variables, mixins, etc.
+//
+
+
+
+$dark: #1c0531;
+
+$color-main: #f34079;
+$color-secondary: #fd9546;
+
+
+$xl: 1399.98px;
+$lg: 1199.98px;
+$md: 991.98px;
+$sm: 767.98px;
+$xs: 575.98px;
+
+$gradient1: linear-gradient(151deg, $color-main 29%, $color-secondary);
+
+.lightning {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 0s;
+    width: 50px;
+  }
+  &:hover {
+    &::after {
+      left: 120%;
+      transition: all .7s ease-in-out;
+    }
+  }
+}
+
+.border-gradient {
+  border-image-source: linear-gradient(151deg, #f34079 29%, #fd9546) !important;
+  border: 1px solid;
+  border-image-slice: 1;
+
+
+}
+
+.text-gradient {
+  background: linear-gradient(151deg, #f34079 29%, #fd9546);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+@keyframes pulse {
+	from {opacity: 1;}
+	to {opacity: 0.2;}
+}

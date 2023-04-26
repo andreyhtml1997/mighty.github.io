@@ -1,0 +1,9 @@
+.btn_bordered {
+  line-height: 1;
+  &:not(.show_on_error) {
+    @extend .lightning;
+    &:hover {
+      background: $gradient1;
+    }
+  }
+}

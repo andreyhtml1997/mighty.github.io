@@ -1,0 +1,360 @@
+<script type="application/javascript">
+  // keep up-to-date with `cloudbox/webuis/www.mightyapp.com/_site/head.js`
+  /*
+   * =~= MIXPANEL =~=
+   *
+   * Load me first so I can track events like "Showed a downloadable CTA"
+   */
+  // prettier-ignore
+  (function (f, b) {
+    if (!b.__SV) {
+      var e, g, i, h;
+      window.mixpanel = b;
+      b._i = [];
+      b.init = function (e, f, c) {
+        function g(a, d) {
+          var b = d.split(".");
+          2 == b.length && (a = a[b[0]], d = b[1]);
+          a[d] = function () {
+            a.push([d].concat(Array.prototype.slice.call(arguments, 0)))
+          }
+        }
+        var a = b;
+        "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel";
+        a.people = a.people || [];
+        a.toString = function (a) {
+          var d = "mixpanel";
+          "mixpanel" !== c && (d += "." + c);
+          a || (d += " (stub)");
+          return d
+        };
+        a.people.toString = function () {
+          return a.toString(1) + ".people (stub)"
+        };
+        i =
+          "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove"
+          .split(" ");
+        for (h = 0; h < i.length; h++) g(a, i[h]);
+        var j = "set set_once union unset remove delete".split(" ");
+        a.get_group = function () {
+          function b(c) {
+            d[c] = function () {
+              call2_args = arguments;
+              call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+              a.push([e, call2])
+            }
+          }
+          for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j
+            .length; c++) b(j[c]);
+          return d
+        };
+        b._i.push([e, f, c])
+      };
+      b.__SV = 1.2;
+      e = f.createElement("script");
+      e.type = "text/javascript";
+      e.async = !0;
+      e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+        MIXPANEL_CUSTOM_LIB_URL : "libs/mixpanel-2-latest.min.js"
+        .match(/^\/\//) ? "libs/mixpanel-2-latest.min.js" :
+        "libs/mixpanel-2-latest.min.js";
+      g = f.getElementsByTagName("script")[0];
+      g.parentNode.insertBefore(e, g)
+    }
+  })(document, window.mixpanel || []);
+
+  // Enabling the debug mode flag is useful during implementation,
+  // but it's recommended you remove it for production
+  mixpanel.init('bd27d52830936d81e1d76e693e21cc50');
+  mixpanel.track('Page View');
+  /*
+   * =~= DOWNLOAD GATE =~=
+   *
+   * n.b. this script _was designed_ to work with a pre-populated CTA button.
+   * by serving HTML from `RequestAccess` => `Loading` => [Final], we guarantee
+   * that in `<noscript>` and other situations we are _always_ serving the
+   * default CTA.
+   *
+   * meanwhile, by placing this script in the `<head>` and observing nodes as
+   * they get added to `document.body`, we _also_ guarantee that users don't get
+   * a flash-of-unstyled error while their browser parses and renders.
+   *
+   * hooray!
+   */
+  (() => {
+    // When this is `true` we close the download gate yet respect existing cookies
+    const IS_DOWNLOAD_GATE_CLOSED = false;
+    const DOWNLOAD_BUTTON_COPY = 'Download Now';
+    const OPEN_CONTINENT_CODES = ['NA', 'EU']; // ipstack continent codes for which we will open the download gate
+    const CLOSED_COUNTRY_CODES = {
+      NA: [],
+      EU: ['FI', 'EE', 'LV', 'LT', 'BY', 'UA', 'MD', 'RO', 'BG', 'GR', 'TR', 'GE', 'AZ', 'RU'],
+    }; // ipstack country codes for which we close the download gate, per continent
+
+    // check the `navigator.platform` to determine the os flavor
+    const isVisitingOnAMac =
+      (window.navigator.userAgentData && window.navigator.userAgentData.platform === 'macOS') ||
+      /^Mac/.test(window.navigator.platform);
+
+    if (!isVisitingOnAMac || window.location.pathname === '/download') {
+      // exit early
+      return;
+    }
+
+    const LOADING_BUTTON_CLASSNAME = 'is-loading';
+    const ButtonType = {
+      Loading: 0,
+      RequestAccess: 1,
+      DownloadNow: 2
+    };
+
+    const ignoreEvents = (event) => {
+      event.bubbles = false;
+      event.preventDefault();
+      event.stopPropagation();
+    };
+
+    const buttonStylerForType = (buttonType) => (buttonElem) => {
+      if (!buttonElem.style.minWidth) {
+        buttonElem.style.minWidth = `${buttonElem.getBoundingClientRect().width}px`;
+      }
+
+      const setInnerText = (newText) => {
+        // all of our `Request Access` buttons use this fancy webflow animation
+        // that puts the `innerText` in an inner div. this code finds it
+
+        // sometimes our innerText won't be in the dom yet.
+        // let's instantiate the observer before checking lest we create a race
+        const observer = new MutationObserver((mutations) => {
+          for (const record of mutations) {
+            for (const node of record.addedNodes) {
+              if (node.innerText !== '') {
+                node.innerText = newText;
+                observer.disconnect();
+                return;
+              }
+            }
+          }
+        });
+
+        if (buttonElem.innerText === '') {
+          observer.observe(buttonElem, {
+            childList: true
+          });
+        } else {
+          // our initial text already exists in the dom; let's find and change it
+          for (const elem of buttonElem.children) {
+            if (elem.innerText !== '') {
+              elem.innerText = newText;
+              return;
+            }
+          }
+        }
+      };
+
+      switch (buttonType) {
+        case ButtonType.Loading:
+          // customize button style
+          buttonElem.classList.add(LOADING_BUTTON_CLASSNAME);
+
+          // ignore click events
+          buttonElem.addEventListener('click', ignoreEvents, true);
+          return;
+        case ButtonType.DownloadNow:
+          // customize link url & target
+          setInnerText(DOWNLOAD_BUTTON_COPY);
+          buttonElem.setAttribute('href', '/download');
+          buttonElem.removeAttribute('target');
+
+          // then continue with the defaults...
+        case ButtonType.RequestAccess:
+        default:
+          // restore button style
+          buttonElem.classList.remove(LOADING_BUTTON_CLASSNAME);
+
+          // restore click events
+          buttonElem.removeEventListener('click', ignoreEvents, true);
+      }
+    };
+
+    const buttonElems = new Set();
+    let currentButtonStyler = buttonStylerForType( /* default */ );
+
+    const onDocumentBody = new Promise((resolve) => {
+      if (document.body) {
+        resolve(document.body);
+        return;
+      }
+
+      new MutationObserver((mutations, observer) => {
+        for (record of mutations) {
+          for (node of record.addedNodes) {
+            if (node === document.body) {
+              observer.disconnect();
+              resolve(node);
+
+              return;
+            }
+          }
+        }
+      }).observe(document.documentElement, {
+        childList: true
+      });
+    });
+
+    onDocumentBody.then((body) => {
+      // watch for buttons we add to the dom during + after parsing
+      new MutationObserver((mutations) => {
+        for (record of mutations) {
+          for (node of record.addedNodes) {
+            if (node.tagName === 'A' && node.dataset.downloadGate === '1') {
+              // we are a `data-download-gate`d link
+              buttonElems.add(node);
+              currentButtonStyler(node);
+            }
+          }
+        }
+      }).observe(body, {
+        childList: true,
+        subtree: true
+      });
+
+      // and collect all buttons presently in the dom
+      // n.b. make sure you set this data attribute on any applicable buttons!!
+      for (const elem of document.body.querySelectorAll('a[data-download-gate="1"]')) {
+        // we are a `data-download-gate`d link
+        buttonElems.add(elem);
+        currentButtonStyler(elem);
+      }
+    });
+
+    const setButtonType = (buttonType) => {
+      currentButtonStyler = buttonStylerForType(buttonType);
+
+      for (const buttonElem of buttonElems) {
+        currentButtonStyler(buttonElem);
+      }
+
+      if (buttonType === ButtonType.DownloadNow) {
+        // log that we showed them a downloadable page
+        mixpanel.track('Showed a downloadable CTA', {
+          Where: `<${DOWNLOAD_BUTTON_COPY}> buttons`,
+        });
+      }
+    };
+
+    const COOKIE_KEY = 'canDownloadMighty';
+    const COOKIE_MAX_AGE = 30 /* mins */ * 60; /* secs */
+    const canDownloadCookie = document.cookie
+      .split(';')
+      .map((cookie) => cookie.trim())
+      .find((cookie) => cookie.startsWith(`${COOKIE_KEY}=`));
+
+    if (canDownloadCookie !== undefined) {
+      // if we've already checked and our cookie is still valid, use that result
+      if (canDownloadCookie.endsWith('=true')) {
+        setButtonType(ButtonType.DownloadNow);
+      } else {
+        setButtonType(ButtonType.RequestAccess);
+      }
+
+      return;
+    }
+
+    if (IS_DOWNLOAD_GATE_CLOSED === true) {
+      // any possible defaults have been set; returning before we request geoip
+      return;
+    }
+
+    // we're about to do a bunch of async work.
+    // let's replace the "Request Access" button with a loading spinner asap
+    setButtonType(ButtonType.Loading);
+
+    const CHECK_DOWNLOAD_AVAILABILITY_TIMEOUT = 2000;
+    const FETCH_VISITOR_REGION_ENDPOINT =
+      'https://us-west2-cloudbox-232602.cloudfunctions.net/get_ip_geolocation?fields=continent_code,country_code';
+    const FETCH_MG_REGION_AVAILABILITY_ENDPOINT =
+      'https://us-west2-cloudbox-232602.cloudfunctions.net/get_region_availability';
+
+    // fetch data or timeout trying
+    new Promise((resolve, reject) => {
+        const fetchJson = (url) => fetch(url).then((response) => response.json());
+        const logFailureEvent = (message) => {
+          console.error(`Could not check download availability: ${event_label}`);
+          mixpanel.track('Check Download Availability Failed', {
+            Message: message,
+          });
+        };
+
+        // after a timeout, reject the promise no matter what
+        const timeoutId = setTimeout(() => {
+          logFailureEvent('Timed out');
+          reject();
+        }, CHECK_DOWNLOAD_AVAILABILITY_TIMEOUT);
+
+        Promise.all([
+            fetchJson(FETCH_VISITOR_REGION_ENDPOINT).catch((err) => {
+              logFailureEvent('Could not check visitor region');
+              throw err;
+            }),
+            fetchJson(FETCH_MG_REGION_AVAILABILITY_ENDPOINT).catch((err) => {
+              logFailureEvent('Could not check region availabilty');
+              throw err;
+            }),
+          ])
+          .then(resolve)
+          .catch(reject)
+          .then(() => clearTimeout(timeoutId));
+      })
+      .then(
+        ([{
+            continent_code: visitorContinentCode,
+            country_code: visitorCountryCode
+          },
+          {
+            region_availability: mightyRegions
+          },
+        ]) => {
+          const isVisitorRegionOpen =
+            OPEN_CONTINENT_CODES.some((code) => code === visitorContinentCode) &&
+            !CLOSED_COUNTRY_CODES[visitorContinentCode].some((code) => code === visitorCountryCode);
+
+          const setVisitorCanDownload = (canDownload) => {
+            // only set the cookie _after_ both promises resolve!
+            // otherwise we are caching the failure state, which the user may retry
+            document.cookie = `${COOKIE_KEY}=${
+    canDownload === true ? 'true' : 'false'
+    };max-age=${COOKIE_MAX_AGE}`;
+
+            setButtonType(canDownload ? ButtonType.DownloadNow : ButtonType.RequestAccess);
+          };
+
+          if (!isVisitorRegionOpen) {
+            setVisitorCanDownload(false);
+            return;
+          }
+
+          const doesVisitorRegionHaveCapacity = mightyRegions.some((region) => {
+            if (region.available_vms < 1) {
+              return false;
+            }
+
+            // all mighty "north america" servers to date are listed as US continent
+            return visitorContinentCode === 'NA' ?
+              region.continent === 'US' :
+              region.continent === visitorContinentCode;
+          });
+
+          if (!doesVisitorRegionHaveCapacity) {
+            setVisitorCanDownload(false);
+          } else {
+            setVisitorCanDownload(true);
+          }
+        },
+      )
+      .catch((err) => {
+        console.error('could not check download availability', err);
+        setButtonType(ButtonType.DownloadNow);
+      });
+  })();
+</script>

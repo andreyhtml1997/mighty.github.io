@@ -1,0 +1,126 @@
+//
+// Shame
+//
+// This file is a temporary placeholder for any Sass/CSS syntax that would otherwise
+// be marked with a TODO in a clean codebase. All the syntax in this file should
+// eventually be placed in the correct partial.
+//
+
+.wf-force-outline-none[tabindex="-1"]:focus {
+  outline: none;
+}
+
+
+
+//top of main page
+/* keep up-to-date with `cloudbox/webuis/www.mightyapp.com/download/head.css */
+a[data-download-gate] {
+  position: relative;
+  text-align: center;
+}
+
+a[data-download-gate]>div:first-of-type {
+  opacity: 1;
+}
+
+a[data-download-gate]::before {
+  position: absolute;
+  display: inline-block;
+  width: var(--spinner-size, 1rem);
+  height: var(--spinner-size, 1rem);
+  top: calc(50% - (var(--spinner-size, 1rem) / 2));
+  left: calc(50% - (var(--spinner-size, 1rem) / 2));
+  content: '';
+
+  border: 1px solid #fff;
+  border-top-color: transparent;
+  border-radius: 100%;
+
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+}
+
+a[data-download-gate].is-loading {
+  cursor: wait;
+}
+
+a[data-download-gate].is-loading>div:first-of-type {
+  opacity: 0 !important;
+  /* override webflow's animations while loading */
+}
+
+a[data-download-gate].is-loading::before {
+  animation: circle infinite 0.75s linear;
+  opacity: 1;
+}
+
+/* Animation adopted from: http://joveyzheng.com/loader/ */
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//top of main page
+/* this makes the embedded lightbox video full-width */
+.w-lightbox-frame,
+.w-lightbox-frame * {
+  width: 100vw;
+  height: calc(100vw / 16 * 9);
+  max-height: 100vh;
+}
+
+.fan-overlay {
+  mix-blend-mode: multiply;
+}
+
+.zoom-notification {
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+}
+
+.switch-container {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cta-button,
+.secondary-button,
+.hero-button {
+  font-variant-ligatures: none;
+}
+
+.screen-container {
+  transform-style: preserve-3d;
+}
+
+
+
+//top of security.html
+.h2.security-question {
+  font-variant-ligatures: none;
+}
+
+.cta-button {
+  font-variant-ligatures: none;
+}
+
+.wf-force-outline-none[tabindex="-1"]:focus {
+  outline: none;
+}

@@ -1,0 +1,161 @@
+body {
+  font-family: "DM Sans";
+  background: #1c0531;
+  // url("../img/bg-lines.svg") center no-repeat
+  position: relative;
+}
+* {
+  outline: none !important;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+}
+
+
+.ac_page {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+  .breadcrumbs {
+
+  }
+  .breadcrumb {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+      padding-left: 0;
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__body {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .r_side {
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+        padding: 0;
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+  }
+}
+
+
+.input_label, .payout_label, .field_box_ .label_ {
+  color: #dadada;
+}
+
+.field_box_.filled_ .label_ {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    bottom: 4.9375rem;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+}
+
+.head_support {
+  i {
+    font-size: 22px;
+  }
+}
+
+
+
+.active_deposit {
+  .deposit_balance {
+
+  }
+  .deposit_line {
+
+  }
+  .deposit_track {
+
+  }
+  .line {
+    background: $gradient1;
+  }
+}
+
+
+.tab.master:not(.active) {
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.tab.master.active {
+  color: $color-secondary;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
