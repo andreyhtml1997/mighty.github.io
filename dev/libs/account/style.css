@@ -100,11 +100,12 @@ body {
 }
 /* ------------------------------ */
 .cl_red {
-	color: #f34079;
+	color: #ed2e49;
+	/* #f34079; */
 }
 /* ------------------------------ */
 .cl_fiolet {
-	color: #797190;
+	color: #9791ab;
 }
 /* ------------------------------ */
 .cl_orange {
@@ -197,7 +198,7 @@ select.simple-select {
   border-left: 0;
 }
 .jq-selectbox__trigger-arrow {
-	background: url(../../img/account/select-arrow.png) center no-repeat;
+	background: url(../../../img/account/select-arrow.png) center no-repeat;
 	-webkit-transform: translate(-50%, -50%);
 		 -moz-transform: translate(-50%, -50%);
   		-ms-transform: translate(-50%, -50%);

@@ -5,12 +5,17 @@
 // that don’t change. For example, color palettes, global variables, mixins, etc.
 //
 
-
+// #6b5f7a = #c5c5c5
 
 $dark: #1c0531;
 
+
 $color-main: #f34079;
-$color-secondary: #fd9546;
+$color-secondary: #fd9546; 
+
+
+$color-pink: #cf25b3;
+$color-violet: #aa08ee;
 
 
 $xl: 1399.98px;
@@ -18,8 +23,9 @@ $lg: 1199.98px;
 $md: 991.98px;
 $sm: 767.98px;
 $xs: 575.98px;
-
+$font-main: Codec-Cold;
 $gradient1: linear-gradient(151deg, $color-main 29%, $color-secondary);
+$gradient2: linear-gradient(151deg, $color-pink 29%, $color-violet);
 
 .lightning {
   position: relative;
@@ -63,4 +69,47 @@ $gradient1: linear-gradient(151deg, $color-main 29%, $color-secondary);
 @keyframes pulse {
 	from {opacity: 1;}
 	to {opacity: 0.2;}
+}
+
+@keyframes pulse2 {
+	from {opacity: 1;}
+	to {opacity: 0.5;}
+}
+
+@keyframes pulse3 {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+@keyframes pulse-low {
+	from {opacity: 1;}
+	to {opacity: 0.5;}
+}
+
+@keyframes pulse-low2 {
+	from {opacity: 0.05;}
+	to {opacity: 0.15;}
+}
+
+
+
+
+
+
+.bg-gradient {
+  background: 
+    radial-gradient(circle at bottom, $color-violet, transparent 80%),    
+    linear-gradient(to top, dodgerblue 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, rgba($color-violet, 0.4) 10%),
+    $color-violet;  
+  animation: bg 30s infinite;
+}
+
+@keyframes bg {
+  0%, 100% { 
+    background: radial-gradient(ellipse at center, rgba(0,125,254,0.25) 0%, rgba(157,78,108,0) 68%, rgba(231,56,39,0) 100%);
+   }
+  50% { 
+    background: radial-gradient(ellipse at center, rgba(194,65,255,0.25) 0%, rgba(219,59,108,0) 68%, rgba(231,56,39,0) 100%);
+  }
 }

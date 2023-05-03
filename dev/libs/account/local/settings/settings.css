@@ -9,7 +9,8 @@
 	padding-bottom: 4.0625rem;
 }
 .settings_item .label {
-	margin-bottom: 3.125rem;
+  text-transform: uppercase;
+	margin-bottom: 1.6875rem;
 	opacity: 0.5;
 }
 /* -------------------- */
@@ -46,7 +47,8 @@
 	margin-bottom: 0;
 }
 .payout_item .label {
-	margin-bottom: 3.125rem;
+  text-transform: uppercase;
+	margin-bottom: 1.6875rem;
 	opacity: 0.5;
 }
 /* -------------------- */

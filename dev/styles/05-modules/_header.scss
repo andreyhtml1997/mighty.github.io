@@ -1,4 +1,7 @@
 .navbar {
+  background-color: transparent !important;
+  border-bottom: 1px solid transparent;
+  transition: all .4s;
   &-container {
     display: flex;
     justify-content: space-between;
@@ -14,8 +17,18 @@
   .acc_logo_stats_ {
     margin: auto;
   }
+  &.open, &.scrolled {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(20px);
+    border-color: $color-secondary;
+  }
+  &--auth {
+    border-color: $color-secondary;
+  }
 }
-
+.account-menu-trigger {
+  cursor: pointer;
+}
 .menu-button.account-menu-trigger {
   @media(max-width: $xl){
   
@@ -56,4 +69,71 @@
   .head_user_box {
     padding-top: 20px;
   }
+}
+.nav_block {
+  position: relative;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+    
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+}
+.nav_block-bg {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: fixed;
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+#ac_navbar {
+  @media(max-width: $xl){
+    
+  }
+  @media(max-width: $lg){
+    z-index: 1030;
+    height: 100vh;
+    top: 0;
+    transform: none;
+    transition: all 0.4s;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    transform: translateX(-100vw);
+
+    &.show {
+      transform: translateX(0vw);
+      .nav_block-bg {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
 }

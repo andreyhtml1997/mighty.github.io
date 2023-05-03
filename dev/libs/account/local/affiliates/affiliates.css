@@ -61,6 +61,7 @@
 }
 /* ---------------------------------------- affiliate joined */
 .affiliate_joined .label {
+  text-transform: uppercase;
 	margin-bottom: 1.25rem;
 }
 /* -------------------- */
@@ -86,6 +87,7 @@
 }
 /* -------------------- */
 .affiliate_statistics .label {
+  text-transform: uppercase;
 	margin-bottom: 0.9375rem;
 }
 /* -------------------- */
@@ -116,10 +118,11 @@
 .affiliate_wallets li .total_amount {
 	margin-bottom: 0.25rem;
 	font-size: 1.5rem;
-	color: #797190;
+	color: #9791ab;
 }
 /* ---------------------------------------- affiliate promo */
 .affiliate_promo .label {
+  text-transform: uppercase;
 	margin-bottom: 2.1875rem;
 	font-size: 1rem;
 }
@@ -128,19 +131,22 @@
 	padding: 2.8125rem 3.125rem 1.875rem;
 	border-radius: 1.875rem;
 	margin-bottom: 0;
+	background-color: rgba(23, 19, 33 , 0.5);
 }
 .affiliate_promo ul li {
 	padding-bottom: 0.9375rem;
 	font-size: 1.375rem;
 	color: #fff;
 }
-.affiliate_promo ul li a {
+.affiliate_promo ul li .call_modal {
 	
 	padding-left: 1.25rem;
 	font-size: 1.5rem;
 	color: #919dd1;
+	display: inline;
+	cursor: pointer;
 }
-.affiliate_promo ul li a:hover {
+.affiliate_promo ul li .call_modal:hover {
 	color: #fff;
 }
 /* ---------------------------------------- refferal link */
@@ -150,6 +156,7 @@
 }
 /* -------------------- */
 .ref_link_box .label {
+  text-transform: uppercase;
 	margin-bottom: 1.25rem;
 }
 /* -------------------- */
@@ -192,7 +199,7 @@
 }
 /* -------------------- */
 #affil_table .table td:nth-child(2) {
-	
+	font-size: 1.9rem;
 }
 #affil_table .table td:nth-child(2),
 #affil_table .table td:nth-child(4),
@@ -229,9 +236,11 @@
 }
 .aff_offer_button_ {
 	margin-bottom:6rem;
+	text-align: center;
 }
 
 ._aff_offer .label {
+  text-transform: uppercase;
 	margin-bottom:2.1875rem;
 }
 
@@ -311,7 +320,7 @@
 }
 @media screen and (max-width: 991px) {
 	.affiliates_p .l_side {
-		padding: 0 4.0625rem 4.0625rem;
+		padding: 0 0 4.0625rem;
 		width: 100%;
 	}
 	.affiliates_p .r_side {

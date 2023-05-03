@@ -67,7 +67,7 @@ e, m, .hidden {
 }
 
 .tab.master:not(.active) {
-	color:grey;
+	color: #c5c5c5;
 	cursor:pointer;
 	transition:0.5s;
 }
@@ -96,13 +96,13 @@ e, m, .hidden {
 	line-height:1;
 	left:0;
 	color:#665070;
-	bottom:2.4rem;
 	z-index:9;
+	bottom: 1.6rem;
 }
 
 .field_box_.filled_ .label_ {
 	font-size:1.125rem;
-	bottom:3.9375rem;
+	bottom:3.6rem;
 }
 
 .grecaptcha-badge {

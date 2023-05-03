@@ -94,7 +94,7 @@ let transpileJSForProd = () => {
         .pipe(babel())
         .pipe(dest(`prod/scripts`))
         .pipe(minify({noSource: true}))
-        .pipe(dest('prod/scripts/app.js'));
+        .pipe(dest('prod/scripts/'));
 
 };
 let purgecssTask = () => {

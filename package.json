@@ -1,7 +1,7 @@
 {
-  "name": "mwr",
+  "name": "mighty",
   "version": "1.0.0",
-  "description": "mwr",
+  "description": "mighty",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

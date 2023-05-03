@@ -823,11 +823,15 @@ function toDec (sum, dec) {
 		return sum;
 	}
 }
-/*
+
 function tilt () {
 	$('.js-tilt').tilt({
 		glare: true,
-		maxGlare: .1
+		maxGlare: 0.1
+	});
+	$('.js-tilt-little').tilt({
+		glare: true,
+		maxGlare: 0.1,
+		maxTilt: 7
 	});
 }
-*/

@@ -738,7 +738,7 @@ textarea.w-select {
   padding-left: 16px;
   border: 1px solid hsla(0, 0%, 100%, 0.16);
   border-radius: 10px;
-  background-color: hsla(0, 0%, 100%, 0.05);
+  background-color: hsla(0, 0%, 100%, 0);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   color: hsla(0, 0%, 100%, 0.88);
@@ -1308,7 +1308,7 @@ textarea.w-select {
   bottom: 0;
   left: 0;
   color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Ubuntu, "Segoe UI", Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Ubuntu, "Segoe UI", sans-serif;
   font-size: 17px;
   line-height: 1.2;
   font-weight: 300;
@@ -2256,18 +2256,21 @@ a {
   align-items: flex-start;
 }
 .container.footer-info-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+  @media(max-width: 1199px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    
+  }
 }
 .container.tech-row {
   display: -webkit-box;
@@ -2392,6 +2395,7 @@ a {
   flex: 0 auto;
   font-size: 18px;
   line-height: 1;
+  flex-shrink: 0;
 }
 .social-link {
   display: -webkit-box;
@@ -2500,27 +2504,27 @@ a {
   font-weight: 700;
   white-space: nowrap;
 }
-.p-roboto {
+.p-codec-cold {
   margin-bottom: 0;
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
 }
-.p-roboto.p-cta {
+.p-codec-cold.p-cta {
   margin-bottom: 40px;
   font-size: 24px;
 }
-.p-roboto.tech-p {
+.p-codec-cold.tech-p {
   position: relative;
   z-index: 100;
   opacity: 0.8;
 }
-.p-roboto.legal-p-bottom-margin {
+.p-codec-cold.legal-p-bottom-margin {
   margin-bottom: 30px;
   font-weight: 400;
 }
-.p-roboto.legal-p-bottom-margin.p-top-margin {
+.p-codec-cold.legal-p-bottom-margin.p-top-margin {
   margin-top: 30px;
 }
-.p-roboto._404-p {
+.p-codec-cold._404-p {
   margin-bottom: 30px;
 }
 .keyboard-container {
@@ -2789,7 +2793,7 @@ a {
   flex: 0 0 auto;
   border-radius: 16px;
   background-color: hsla(0, 7%, 91.6%, 0.25);
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   font-size: 18px;
   line-height: 18px;
 }
@@ -3088,7 +3092,7 @@ a {
   margin-right: 8px;
   margin-left: 8px;
   padding: 6px;
-  opacity: 0.6;
+  opacity: 0.8;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
   color: #fff;
@@ -3137,8 +3141,8 @@ a {
   width: auto;
   height: 2px;
   margin: 0 12px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#cf25b3), to(#aa08ee));
-  background-image: linear-gradient(90deg, #cf25b3, #aa08ee);
+  background-image: -webkit-gradient(linear, left top, right top, from(#e83290), to(#c11dcc));
+  background-image: linear-gradient(90deg, #e83290, #c11dcc);
 }
 .secondary-button-border.right {
   left: auto;
@@ -3176,6 +3180,10 @@ a {
   margin: 0 12px;
   background-image: -webkit-gradient(linear, left top, right top, from(#e83290), to(#c11dcc));
   background-image: linear-gradient(90deg, #e83290, #c11dcc);
+}
+.performance {
+  position: relative;
+  z-index: 1;
 }
 .performance-info-container {
   width: 700px;
@@ -3376,7 +3384,7 @@ a {
   align-items: center;
   border-radius: 6px;
   background-color: rgba(30, 146, 233, 0.3);
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   font-size: 10px;
   line-height: 1;
   font-weight: 400;
@@ -3479,7 +3487,7 @@ a {
   padding: 5vw;
   border-radius: 24px;
   background-color: #2b0944;
-  background-image: url("../img/processor-bg.svg");
+  background-image: url("../../img//processor-bg.svg");
   background-position: 5% 40%;
   background-size: auto 130%;
   background-repeat: no-repeat;
@@ -3760,7 +3768,7 @@ a {
 .notification-hint {
   margin-top: 6px;
   opacity: 0.8;
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   font-size: 17px;
   line-height: 17px;
   font-weight: 400;
@@ -4312,7 +4320,7 @@ a {
 .alt-list-item {
   margin-bottom: 10px;
   padding-left: 40px;
-  background-image: url("../img/bullet.svg");
+  background-image: url("../../img//bullet.svg");
   background-position: 0 10px;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -4464,6 +4472,7 @@ a {
   transform: translate3d(0, 0, 1px);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  z-index: 1;
 }
 .float-2 {
   position: absolute;
@@ -4474,12 +4483,14 @@ a {
   transform: translate3d(0, 0, 1px);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  z-index: 1;
 }
 .float-3 {
   position: absolute;
   left: 16.3%;
   top: 33.5%;
   width: 26.1%;
+  z-index: 1;
 }
 .float-4 {
   position: absolute;
@@ -4490,6 +4501,7 @@ a {
   transform: translate3d(0, 0, 1px);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  z-index: 1;
 }
 .needle-container {
   position: relative;
@@ -4667,7 +4679,7 @@ a {
   object-fit: fill;
 }
 .text-block-2 {
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: rgba(241, 242, 244, 0.56);
   font-size: 15px;
   font-weight: 400;
@@ -4712,7 +4724,7 @@ a {
 .subtitle {
   margin-top: 8px;
   margin-bottom: 12px;
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: rgba(241, 242, 244, 0.72);
   font-size: 18px;
   line-height: 150%;
@@ -4935,7 +4947,7 @@ a {
 .link {
   padding: 0;
   background-color: transparent;
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: #b658ff;
   font-size: 18px;
   text-decoration: none;
@@ -4976,7 +4988,7 @@ a {
   background-color: rgba(241, 242, 244, 0.16);
 }
 .answer {
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: rgba(241, 242, 244, 0.56);
   font-size: 18px;
   line-height: 150%;
@@ -5244,18 +5256,18 @@ a {
   grid-column-gap: 12px;
 }
 .text-block-4 {
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   font-size: 16px;
   font-weight: 400;
 }
 .bold-text-2 {
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: hsla(0, 0%, 100%, 0.64);
   font-size: 15px;
   font-weight: 300;
 }
 .bold-text-2.bold {
-  font-family: "DM Sans";
+  font-family: Codec-Cold;
   color: hsla(0, 0%, 100%, 0.8);
   font-weight: 400;
 }
@@ -5616,10 +5628,10 @@ a {
   .biscuit-container {
     height: 550px;
   }
-  .p-roboto {
+  .p-codec-cold {
     font-size: 22px;
   }
-  .p-roboto.p-cta {
+  .p-codec-cold.p-cta {
     font-size: 26px;
   }
   .speed-info-container {
@@ -5896,7 +5908,7 @@ a {
     margin-top: 140px;
   }
   .link {
-    font-family: "DM Sans";
+    font-family: Codec-Cold;
   }
   .div-block-13 {
     margin-bottom: 56px;
@@ -6159,7 +6171,7 @@ a {
     padding: 18px 18px 16px;
     font-size: 18px;
   }
-  .p-roboto {
+  .p-codec-cold {
     font-size: 18px;
   }
   .keyboard-container {
@@ -6480,14 +6492,14 @@ a {
     width: 50px;
     height: 100%;
     padding: 0;
-    background-image: url("../img/menu-open.svg");
+    background-image: url("../../img//menu-open.svg");
     background-position: 100% 50%;
     background-size: 30px;
     background-repeat: no-repeat;
   }
   .menu-button.w--open {
     background-color: transparent;
-    background-image: url("../img/menu-close.svg");
+    background-image: url("../../img//menu-close.svg");
     background-position: 100% 50%;
     background-size: 24px;
     background-repeat: no-repeat;
@@ -7038,7 +7050,7 @@ a {
   .zoom-notification {
     display: none;
   }
-  .p-roboto.p-cta {
+  .p-codec-cold.p-cta {
     margin-bottom: 30px;
     font-size: 22px;
     line-height: 1.4;
@@ -7291,7 +7303,7 @@ a {
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
-    background-image: url("../img/laptop.png");
+    background-image: url("../../img//laptop.png");
     background-position: 0 50%;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -7567,10 +7579,10 @@ a {
     right: 7vw;
     bottom: 7vw;
   }
-  .p-roboto {
+  .p-codec-cold {
     font-size: 19px;
   }
-  .p-roboto._404-p {
+  .p-codec-cold._404-p {
     margin-bottom: 20px;
   }
   .speed-info-container.left-container {
@@ -7980,7 +7992,7 @@ a {
     margin-bottom: 32px;
   }
   .link {
-    font-family: "DM Sans";
+    font-family: Codec-Cold;
   }
   .div-block-13 {
     -webkit-box-orient: vertical;

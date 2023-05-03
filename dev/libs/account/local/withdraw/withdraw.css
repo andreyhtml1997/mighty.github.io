@@ -14,7 +14,8 @@
 }
 /* -------------------- */
 .withdraw_items .label {
-	margin-bottom: 4.6875rem;
+  text-transform: uppercase;
+	margin-bottom: 1.6875rem;
 	opacity: 0.5;
 }
 .withdraw_items .label.opaque {
@@ -28,6 +29,7 @@
 /* -------------------- */
 .withdraw_info {
 	min-width: 20.625rem;
+	position: relative;
 }
 .withdraw_info .input_label {
 	margin-bottom: 0;
@@ -76,7 +78,7 @@
 }
 
 .plus_weekend {
-	
+	display: none !important;
 	font-size:1.2rem;
 	position:absolute;
 	left:9rem;

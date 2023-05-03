@@ -1,5 +1,5 @@
 #ac_main {
-	background-color: #0f1224;
+	/* background-color: #0f1224; */
   flex-direction: column;
 	position: relative;
 	min-height: 100%;
@@ -20,12 +20,12 @@
 	display: none;
 }
 #ac_main::after {
-  background: url(../../img/account/ac-main-bg.jpg) left center no-repeat;
+  background: url(../../../img//account/ac-main-bg.jpg) left center no-repeat;
 	background-size: cover;
 	z-index: 1;
 }
 #ac_main::before {
-  background: url(../../img/account/ac-main-right-bg.png) right center no-repeat;
+  background: url(../../../img//account/ac-main-right-bg.png) right center no-repeat;
 	background-size: cover;
 	z-index: 2;
 }
@@ -42,7 +42,7 @@
 	transition:0.3s;
 }
 #ac_header .top_menu_item:hover {
-	opacity:0.3;
+	opacity:0.5;
 }
 /* ------------------------------ */
 .bicubik {
@@ -260,6 +260,7 @@ a.logout_link:hover {
 /* ---------------------------------------- page */
 .ac_page {
 	width: 100%;
+	
 }
 /* ------------------------------ */
 .account_p {
@@ -267,9 +268,10 @@ a.logout_link:hover {
 }
 /* ------------------------------ */
 .ac_page .label {
+  text-transform: uppercase;
 	font-size: 1.5rem;
 	line-height: 1;
-	color: #797190;
+	color: #9791ab;
 }
 /* ------------------------------ */
 .wallet_icon {
@@ -278,9 +280,10 @@ a.logout_link:hover {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	height: 3.9375rem;
-	width: 3.9375rem;
+	height: 31px;
+	width: 31px;
 	display: flex;
+	flex-shrink: 0;
 }
 .wallet_icon .icon_height {
 	height: 2.3125rem;
@@ -335,14 +338,14 @@ a.logout_link:hover {
 
 /* -------------------- */
 .breadcrumb-item a {
-	color: #797190;
+	color: #9791ab;
 }
 .breadcrumb-item a:hover {
 	color: #fff;
 }
 /* -------------------- */
 .breadcrumb-item.active {
-	color: #797190;
+	color: #9791ab;
 }
 /* -------------------- */
 .breadcrumb-item+.breadcrumb-item {
@@ -350,7 +353,7 @@ a.logout_link:hover {
 }
 .breadcrumb-item+.breadcrumb-item::before {
   padding-right: 0.5rem;
-  color: #797190;
+  color: #9791ab;
 }
 /* ------------------------------ */
 .border_box {
@@ -369,7 +372,7 @@ a.logout_link:hover {
 /* ------------------------------ */
 .table thead th {
   padding: 0.9375rem 1.875rem 0.9375rem 0;
-  
+	font-weight: 400;
   vertical-align: middle;
   font-size: 1.5rem;
   border-bottom: 0;
@@ -385,7 +388,7 @@ a.logout_link:hover {
   line-height: 1.875rem;
   font-size: 1.375rem;
   position: relative;
-  color: #797190;
+  color: #9791ab;
 	border-bottom: none;
 }
 /* -------------------- */
@@ -433,7 +436,7 @@ a.logout_link:hover {
 }
 .page-item:first-child .page-link:hover {
 	border-color: transparent;
-	color: #797190;
+	color: #9791ab;
 	opacity: 1;
 }
 /* -------------------- */
@@ -446,7 +449,7 @@ a.logout_link:hover {
   min-height: 3.4375rem;
   min-width: 3.4375rem;
   align-items: center;
-  color: #797190;
+  color: #9791ab;
   line-height: 1;
   margin-left: 0;
   display: flex;
@@ -480,7 +483,7 @@ a.logout_link:hover {
 	align-items: center;
   font-size: 1.375rem;
   width: 11.5625rem;
-  height: 4.75rem;
+  min-height: 4.75rem;
   display: flex;
   color: #fff;
 }
@@ -633,9 +636,10 @@ a.logout_link:hover {
   align-items: center;
   font-size: 2rem;
   transition: 0.25s;
-  height: 4.75rem;
+  min-height: 4.75rem;
   display: flex;
   color: #fff;
+	text-align: center;
 }
 
 .btn_bordered.show_on_error,
@@ -667,6 +671,9 @@ a.logout_link:hover {
 /*	border-color:#fff;
   color:#fff;
 }*/
+.raise {
+	text-align: center;
+}
 .raise:hover {
   box-shadow: 0 0.5em 0.5em -0.4em #ff6431;
   transform: translateY(-0.25em);
@@ -733,7 +740,7 @@ a.logout_link:hover {
 .double_input_one .double_icon_ {
 	width:auto;
 	right:3rem;
-	color:#665070;
+	color: #c5c5c5;
 	font-size:1.125rem;
 	letter-spacing:0.2rem;
 }
@@ -758,7 +765,7 @@ a.logout_link:hover {
 	font-size: 1.25rem;
 	text-align: center;
 	width: 10.625rem;
-	color: #665070;
+	color: #c5c5c5;
 	right: 0;
 }
 /* -------------------- */
@@ -1010,7 +1017,7 @@ ntf.o {
 }
 /* ------------------------------ */
 .account_btn.light .content_bg {
-	background: url(../../img/account/social-img.png) center no-repeat;
+	background: url(../../../img//account/social-img.png) center no-repeat;
 	background-size: cover;
 	position: absolute;
 	width: 15rem;
@@ -1049,7 +1056,7 @@ ntf.o {
 }
 /* ------------------------------ */
 .account_btn.dark .content_bg {
-	background: url(../../img/account/shields-img.png) center no-repeat;
+	background: url(../../../img//account/shields-img.png) center no-repeat;
 	background-size: cover;
 	position: absolute;
 	height: 11.3125rem;
@@ -1074,12 +1081,12 @@ ntf.o {
 	color: #ffffff;
 }
 .account_btn.dark::after {
-	background: url(../../img/account/arrow-white-left.png) center no-repeat;
+	background: url(../../../img//account/arrow-white-left.png) center no-repeat;
 	background-size: cover;
 }
 /* ------------------------------ */
 .account_btn.orange .content_bg {
-  background: url(../../img/account/aids-img.png) center no-repeat;
+  background: url(../../../img//account/aids-img.png) center no-repeat;
   background-size: cover;
   position: absolute;
   right: 0.813rem;
@@ -1107,7 +1114,7 @@ ntf.o {
   color: #ffffff;
 }
 .account_btn.orange::after {
-  background: url(../../img/account/arrow-white-left.png) center no-repeat;
+  background: url(../../../img//account/arrow-white-left.png) center no-repeat;
   background-size: cover;
 }
 
@@ -1258,15 +1265,21 @@ ntf.o {
 	display:flex;
 	justify-content:flex-start;
 	align-items:center;
+	font-size:17px;
+}
+@media(max-width: 767px) {
+	.acc_logo_stats_ {
+		font-size: 13px;
+	}
 }
 
 .acc_logo_stats_days {
-	font-size:1.5rem;
+	
 	margin-left:8rem;
 }
 
 .acc_logo_stats_deps {
-	font-size:1.5rem;
+	
 	margin-left:4rem;
 }
 
@@ -1307,13 +1320,14 @@ ntf.o {
 }
 
 @media screen and (min-width: 3300px) {
+	.acc_logo_stats_ {
+		/* font-size:1.8rem; */
+	}
 	.acc_logo_stats_days {
-		font-size:1.8rem;
 		margin-left:10rem;
 	}
 
 	.acc_logo_stats_deps {
-		font-size:1.8rem;
 		margin-left:5rem;
 	}
 }
@@ -1483,7 +1497,7 @@ ntf.o {
     padding-left: 2.1875rem;
 	}
 	.table tr::before {
-		background: url(../../img/account/table-arrow.png) center no-repeat;
+		background: url(../../../img//account/table-arrow.png) center no-repeat;
 		-webkit-transform: translateY(-50%);
 			 -moz-transform: translateY(-50%);
 	  		-ms-transform: translateY(-50%);
@@ -1543,25 +1557,15 @@ ntf.o {
 	#ac_header a.head_support {
 		display: none;
 	}
-	#ac_navbar {
-		background-color: rgba(0, 0, 0, 0.3);
-		overflow: hidden;
-		position: fixed;
-		z-index: 1030;
-		height: 100vh;
-		width: 0;
-		top: 0;
-	}
-	#ac_navbar.show {
-		width: 100vw;
-	}
+	
 	.nav_block {
 		background-color: #322c42;
 		padding-bottom: 4.8rem;
 		overflow-x: hidden;
-		width: 44.6875rem;
+		max-width: 44.6875rem;
 		overflow-y: auto;
 		height: 100%;
+		width: 100%;
 	}
 	.ac_navbar_close {
 		border-bottom: 0.125rem solid rgba(255, 255, 255, 0.1);
@@ -1617,7 +1621,7 @@ ntf.o {
 		padding-left: 4.8rem;
 	}
 	.account_p {
-		padding: 3.75rem 3.125rem 1.875rem;
+		padding: 3.75rem 0 1.875rem;
 	}
 	#ac_footer {
 		padding: 2rem 0;
@@ -1713,21 +1717,21 @@ ntf.o {
 }
 @media (min-width: 1920px) and (max-width: 2239px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 @media (min-width: 1440px) and (max-width: 1919px) {
   html {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 @media (min-width: 670px) and (max-width: 1439px) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
 }
 @media screen and (max-width: 669px) {
   html {
-    font-size: 6px;
+    font-size: 9px;
   }
 }

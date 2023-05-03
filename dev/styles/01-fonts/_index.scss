@@ -7,69 +7,86 @@
 // @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 //
 
+/* 
 
 @font-face {
-  font-family: "DM Sans";
-  font-weight: 400;
-  src: url(../fonts/DMSans-Regular.ttf)
+  font-family: Codec-Cold;
+  font-weight: 100;
+  src: url(../fonts/codeccold/Codec-Cold-Thin.ttf);
 }
 
 @font-face {
-  font-family: "DM Sans";
-  font-weight: 500;
-  src: url(../fonts/DMSans-Medium.ttf)
-}
-
-@font-face {
-  font-family: "DM Sans";
-  font-weight: 700;
-  src: url(../fonts/DMSans-Bold.ttf)
-}
-
-@font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
   font-weight: 200;
-  src: url(../fonts/Roboto-Thin.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Extralight.ttf);
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
   font-weight: 300;
-  src: url(../fonts/Roboto-Light.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Light.ttf);
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
   font-weight: 400;
-  src: url(../fonts/Roboto-Regular.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Regular.ttf);
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
   font-weight: 500;
-  src: url(../fonts/Roboto-Medium.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-News.ttf);
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
+  font-weight: 600;
+  src: url(../fonts/codeccold/Codec-Cold-Regular.ttf);
+}
+
+@font-face {
+  font-family: Codec-Cold;
   font-weight: 700;
-  src: url(../fonts/Roboto-Bold.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Bold.ttf);
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Codec-Cold;
+  font-weight: 800;
+  src: url(../fonts/codeccold/Codec-Cold-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Codec-Cold;
   font-weight: 900;
-  src: url(../fonts/Roboto-Black.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Heavy.ttf);
 }
 
+ */
+
+
+
 @font-face {
-  font-family: Verdana;
+  font-family: Codec-Cold;
   font-weight: 400;
-  src: url(../fonts/Verdana.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Regular.woff) format('woff');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Verdana;
+  font-family: Codec-Cold;
   font-weight: 700;
-  src: url(../fonts/Verdana-Bold.ttf)
+  src: url(../fonts/codeccold/Codec-Cold-Bold.woff) format('woff');
+  font-display: swap;
 }
+
+@font-face {
+  font-family: Codec-Cold;
+  font-weight: 800;
+  src: url(../fonts/codeccold/Codec-Cold-ExtraBold.woff) format('woff');
+  font-display: swap;
+}
+
+
+

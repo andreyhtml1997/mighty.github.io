@@ -101,6 +101,6 @@ function resetRequestAccepted (args) {
 }
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('ac_main', 'libs/particles.json', function() {
+/* particlesJS.load('ac_main', 'libs/particles/particles.json', function() {
   console.log('callback - particles.js config loaded');
-});
+}); */
