@@ -13,12 +13,15 @@ $dark: #1c0531;
 $color-main: #f34079;
 $color-secondary: #fd9546; 
 
+$color-medium: rgb(245,81,111);
 
-$color-pink: #cf25b3;
+
+$color-pink: #4725cf;
 $color-violet: #aa08ee;
+$color-blue: #007ffe;
 
 
-$xl: 1399.98px;
+$xl: 1499.98px;
 $lg: 1199.98px;
 $md: 991.98px;
 $sm: 767.98px;
@@ -26,6 +29,7 @@ $xs: 575.98px;
 $font-main: Codec-Cold;
 $gradient1: linear-gradient(151deg, $color-main 29%, $color-secondary);
 $gradient2: linear-gradient(151deg, $color-pink 29%, $color-violet);
+$gradient3: linear-gradient(90deg, #285de4, #c567ff 50%, #fd9546);
 
 .lightning {
   position: relative;
@@ -66,34 +70,80 @@ $gradient2: linear-gradient(151deg, $color-pink 29%, $color-violet);
   text-fill-color: transparent;
 }
 
-@keyframes pulse {
-	from {opacity: 1;}
-	to {opacity: 0.2;}
+
+
+.d-xl-none {
+  @media(min-width: $xl){
+    display: none !important;
+  }
+  @media(min-width: $lg){
+    
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
 }
 
-@keyframes pulse2 {
-	from {opacity: 1;}
-	to {opacity: 0.5;}
+.d-lg--none {
+  @media(min-width: $xl){
+
+  }
+  @media(min-width: $lg){
+    
+  }
+  @media(min-width: $md){
+    display: none !important;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
 }
 
-@keyframes pulse3 {
-	from {opacity: 1;}
-	to {opacity: 0;}
+.d-lg-flex {
+  @media(max-width: $xl){
+    
+  }
+  @media(max-width: $lg){
+    display: flex !important;
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
 }
-
-@keyframes pulse-low {
-	from {opacity: 1;}
-	to {opacity: 0.5;}
+.d-md-flex {
+  @media(max-width: $xl){
+    
+  }
+  @media(max-width: $lg){
+  }
+  @media(max-width: $md){
+    display: flex !important;
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
 }
-
-@keyframes pulse-low2 {
-	from {opacity: 0.05;}
-	to {opacity: 0.15;}
-}
-
-
-
-
 
 
 .bg-gradient {
@@ -105,11 +155,28 @@ $gradient2: linear-gradient(151deg, $color-pink 29%, $color-violet);
   animation: bg 30s infinite;
 }
 
-@keyframes bg {
-  0%, 100% { 
-    background: radial-gradient(ellipse at center, rgba(0,125,254,0.25) 0%, rgba(157,78,108,0) 68%, rgba(231,56,39,0) 100%);
-   }
-  50% { 
-    background: radial-gradient(ellipse at center, rgba(194,65,255,0.25) 0%, rgba(219,59,108,0) 68%, rgba(231,56,39,0) 100%);
+
+
+
+
+
+
+.boujee-text {
+  --bg-size: 400%;
+  background: linear-gradient( 90deg, $color-violet, $color-blue, $color-main, $color-violet ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: move-bg 16s linear infinite;
+  * {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
   }
 }
+
+

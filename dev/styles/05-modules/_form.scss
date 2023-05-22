@@ -32,6 +32,32 @@
 .cta---send-link-macos {
   width: 100%;
   max-width: none;
+  background: $gradient1;
+  transition: all 0.3s;
+  overflow: hidden;
+  
+  &::after {
+      background: #fff;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: 0.2;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 0s;
+      width: 50px;
+
+      
+  }
+  &:hover {
+    box-shadow: 0 10px 20px -10px $color-medium;
+    transform: translateY(-10px);
+    &::after {
+      left: 120%;
+      transition: all 0.7s ease-in-out;
+    }
+  }
 }
 
 
@@ -43,6 +69,9 @@
   }
   &__label {
     //display: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    // opacity: 0.6;
   }
   &__tooltip {
     position: absolute;
@@ -98,14 +127,14 @@
   
 }
 .text-field {
-  height: 52px;
+  min-height: 52px;
   padding-left: 16px;
   border: 1px solid hsla(0, 0%, 100%, .16);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   //background-color: hsla(0, 0%, 100%, .11);
   color: hsla(0, 0%, 100%, .88);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   &:focus {
     border-color: #3898ec;

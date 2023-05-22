@@ -1,7 +1,8 @@
 .navbar {
   background-color: transparent !important;
-  border-bottom: 1px solid transparent;
+  //border-bottom: 1px solid transparent;
   transition: all .4s;
+  text-transform: uppercase;
   &-container {
     display: flex;
     justify-content: space-between;
@@ -18,12 +19,82 @@
     margin: auto;
   }
   &.open, &.scrolled {
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
     backdrop-filter: blur(20px);
     border-color: $color-secondary;
+    &:after {
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      position: absolute;
+      display: flex;
+      background: $gradient3;
+    }
   }
   &--auth {
     border-color: $color-secondary;
+  }
+
+  .connection {
+    display: flex;
+    gap: 15px;
+    &__el {
+      display: flex;
+      position: relative;
+      &:hover {
+        .connection__el-icon {
+          &::before {
+            background-color: transparent;
+            //background-image: url(../img/icon-telegram-active.svg);
+          }
+        }
+      }
+    }
+    &__el-icon {
+      
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      
+
+      /*
+      width: 36px;
+      height: 36px;
+      background: $gradient1;
+      border-radius: 5px;
+      &::before {
+        position: absolute;
+        background-image: url(../img/icon-telegram-white.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $dark;
+        content: '';
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        border-radius: 5px;
+      }*/
+    } 
+    &__el-text {
+      /* display: flex;
+      background: $gradient1;
+      border: 2px solid $dark;
+      color: white;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 2px 6px 1px;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: -7px;
+      border-radius: 4px;
+      margin-left: -26px; */
+    }
   }
 }
 .account-menu-trigger {
@@ -101,6 +172,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s;
+  backdrop-filter: blur(10px);
 }
 
 #ac_navbar {
@@ -136,4 +208,86 @@
   
   }
   
+}
+
+
+.no-auth-menu {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+    overflow: auto;
+    padding: 60px 0px;
+    gap: 30px;
+    .nav-menu-group {
+      margin: auto;
+      height: auto;
+    }
+    &.show {
+      transform: translateX(0%);
+    }
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  .acc_logo_stats_ {
+    display: none;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    }
+    @media(max-width: $sm){
+      
+    }
+    @media(max-width: $xs){
+      display: flex;
+      gap: 15px;
+      //flex-direction: column;
+      padding: 0 15px;
+      text-align: center;
+      width: 100%;
+      
+    }
+    .acc_logo_stats_deps {
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+        margin: 0;
+        width: calc(100%/3);
+        display: flex;
+        flex-direction: column;
+      }
+      
+    }
+  }
 }

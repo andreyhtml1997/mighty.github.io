@@ -36,9 +36,13 @@
 								<div class="label">
 									My available balance
 								</div>
-
-								<div class="amount">
-									<sup class="currency">$</sup><span>100.75</span>
+								
+								<div class="amount_box">
+									<div class="amount">
+										<sup class="currency">$</sup><span>100.63</span>
+									</div>
+									
+									<a href="account-reinvest.html" class="reinvest_button">Reinvest</a>
 								</div>
 							</div>
 						</div>
@@ -117,143 +121,220 @@
 								<a href="https://c12.net/statistics/type/deposit">See details</a>
 							</div>
 							
+
+
+
 							<div id="deposits_list">
 
-								<div class="active_deposit js-tilt">
-									<div class="deposit_balance">
 
-										<ul class="list-unstyled get_paid">
 
-											<li class="get_paid__el">
-												<div class="amount cl_red">
-													<sup class="currency">$</sup><span>450.00</span>
-												</div>
-												<span class="get_paid__el-title">Active Deposit</span>
-											</li>
+<!-- <div class="active_deposit js-tilt check">
+	<div class="deposit_balance">
+		<div class="amount cl_red" style="display:flex; align-items:flex-start;">
+			<div>
+				<sup class="currency">$</sup><span>12.00</span>
+			</div>
+			
+			<a 
+				href="#cancelDeposit" 
+				class="call_modal" 
+				style="color:#ff8a00; margin-left:1.5rem; font-size:1rem; margin-top:0.22rem;"
+				data-bs-toggle="modal"
+			>Cancel</a>
+		</div>
 
-											<li class="get_paid__el">
-												<span class="paid_amount">+ $50.52</span>
-												<div class="get_paid__el-flex-wrap">
-													<span class="get_paid__el-title">Credited</span> 
-													<span class="get_paid__el-revenue">No Revenue On Weekends</span>
-												</div>
-											</li>
+		<ul class="list-unstyled get_paid">
+			<li>Pending deposit</li>
+			<li>
+				<span>&nbsp;</span><span class="paid_amount">&nbsp;</span>
+			</li>
+			<li>Awaiting Payment  <span class="cl_orange"><span class="clock" data-clock="1327"><span class="clock_hours">00</span><span class="clock_column">:</span><span class="clock_minutes">22</span><span class="clock_column">:</span><span class="clock_seconds">08</span></span></span></li>
+		</ul>
+		
+		<div class="currency_">BTC</div>
+	</div>
 
-										</ul>
-										
-										<div class="currency_">BTC</div>
-									</div>
+	<div class="deposit_line">
+		<div class="line" style="width:0%"></div>
+	</div>
 
-									<div class="deposit_line">
-										<div class="deposit_track"></div>
-										<div class="line" style="width:58.333333333333%"></div>
-									</div>
+	<div class="deposit_term">
+		<div class="row no-gutters align-items-center">
+			<div class="col">
+				<div class="label">
+					<span class="days">
+						address: 
+						<span 
+							class="js-copy cl_white pointer" data-clipboard-action="copy" data-clipboard-text="bc1q03nylfq7xtxtxr03c2lzjkk0mucc2q5xv5dcn8"
+						>bc1q0*****5dcn8</span>
+					</span>
+				</div>
+			</div>
+			
+			<div class="col col-auto flex-shrink-0">
+				<a href="#qrModal" class="call_modal invest_qr_" data-bs-toggle="modal">
+					<img src="img/qr.png" class="invest_qr">
+				</a>
+			</div>
+			
+			<div class="col-auto">
+				<div class="label">
+					<span class="days">
+						Amount: 
+						<span 
+							class="cl_white js-copy pointer" data-clipboard-action="copy" 
+							data-clipboard-text="0.00043536"
+						>0.00043536</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
 
-									<div class="deposit_term">
-										<div class="label">
-											<span>Added</span><span class="cl_white">12/04</span>
-											<span>08:19</span>
-										</div>
-										<div class="days_remain">
-											<span class="days">Days remaining</span> 
-											<span class="cl_white">5</span><span>/12</span>
-										</div>
-									</div>
-									<div class="js-tilt-glare">
-										<div class="js-tilt-glare-inner"></div>
-									</div>
-								</div>
+<div class="active_deposit js-tilt">
+	<div class="deposit_balance">
 
-								<div class="active_deposit js-tilt">
-									<div class="deposit_balance">
+		<ul class="list-unstyled get_paid">
 
-										<ul class="list-unstyled get_paid">
+			<li class="get_paid__el">
+				<div class="amount cl_red">
+					<sup class="currency">$</sup><span>450.00</span>
+				</div>
+				<span class="get_paid__el-title">Active Deposit</span>
+			</li>
 
-											<li class="get_paid__el">
-												<div class="amount cl_red">
-													<sup class="currency">$</sup><span>450.00</span>
-												</div>
-												<span class="get_paid__el-title">Active Deposit</span>
-											</li>
+			<li class="get_paid__el">
+				<span class="paid_amount">+ $50.52</span>
+				<div class="get_paid__el-flex-wrap">
+					<span class="get_paid__el-title">Credited</span> 
+					<span class="get_paid__el-revenue">Next - <span class="note_next_profit">11/05 07:05</span></span>
+				</div>
+			</li>
 
-											<li class="get_paid__el">
-												<span class="paid_amount">+ $50.52</span>
-												<div class="get_paid__el-flex-wrap">
-													<span class="get_paid__el-title">Credited</span> 
-													<span class="get_paid__el-revenue">No Revenue On Weekends</span>
-												</div>
-											</li>
+		</ul>
+		
+		<div class="currency_">BTC</div>
+	</div>
 
-										</ul>
-										
-										<div class="currency_">BTC</div>
-									</div>
+	<div class="deposit_line">
+		<div class="deposit_track"></div>
+		<div class="line" style="width:58.333333333333%"></div>
+	</div>
 
-									<div class="deposit_line">
-										<div class="deposit_track"></div>
-										<div class="line" style="width:58.333333333333%"></div>
-									</div>
+	<div class="deposit_term">
+		<div class="label">
+			<span>Added</span><span class="cl_white">12/04</span>
+			<span>08:19</span>
+		</div>
+		<div class="days_remain">
+			<span class="days">Accruals</span> 
+			<span class="cl_white">5</span><span>/12</span>
+		</div>
+	</div>
+	<div class="js-tilt-glare">
+		<div class="js-tilt-glare-inner"></div>
+	</div>
+</div>
 
-									<div class="deposit_term">
-										<div class="label">
-											<span>Added</span><span class="cl_white">12/04</span>
-											<span>08:19</span>
-										</div>
-										<div class="days_remain">
-											<span class="days">Days remaining</span> 
-											<span class="cl_orange">2</span><span>/12</span>
-										</div>
-									</div>
-									<div class="js-tilt-glare">
-										<div class="js-tilt-glare-inner"></div>
-									</div>
-								</div>
+<div class="active_deposit js-tilt">
+	<div class="deposit_balance">
 
-								<div class="active_deposit js-tilt">
-									<div class="deposit_balance">
+		<ul class="list-unstyled get_paid">
 
-										<ul class="list-unstyled get_paid">
+			<li class="get_paid__el">
+				<div class="amount cl_red">
+					<sup class="currency">$</sup><span>450.00</span>
+				</div>
+				<span class="get_paid__el-title">Active Deposit</span>
+			</li>
 
-											<li class="get_paid__el">
-												<div class="amount cl_red">
-													<sup class="currency">$</sup><span>450.00</span>
-												</div>
-												<span class="get_paid__el-title">Active Deposit</span>
-											</li>
+			<li class="get_paid__el">
+				<span class="paid_amount">+ $50.52</span>
+				<div class="get_paid__el-flex-wrap">
+					<span class="get_paid__el-title">Credited</span> 
+					<!-- <span class="get_paid__el-revenue">No Revenue On Weekends</span> -->
+					<span class="get_paid__el-revenue">Next - <span class="note_next_profit">11/05 07:05</span></span>
+				</div>
+			</li>
 
-											<li class="get_paid__el">
-												<span class="paid_amount">+ $50.52</span>
-												<div class="get_paid__el-flex-wrap">
-													<span class="get_paid__el-title">Credited</span> 
-													<span class="get_paid__el-revenue">No Revenue On Weekends</span>
-												</div>
-											</li>
+		</ul>
+		
+		<div class="currency_">BTC</div>
+	</div>
 
-										</ul>
-										
-										<div class="currency_">BTC</div>
-									</div>
+	<div class="deposit_line">
+		<div class="deposit_track"></div>
+		<div class="line" style="width:58.333333333333%"></div>
+	</div>
 
-									<div class="deposit_line">
-										<div class="deposit_track"></div>
-										<div class="line" style="width:58.333333333333%"></div>
-									</div>
+	<div class="deposit_term">
+		<div class="label">
+			<span>Added</span><span class="cl_white">12/04</span>
+			<span>08:19</span>
+		</div>
+		<div class="days_remain">
+			<span class="days">Accruals</span> 
+			<span class="cl_white">2</span><span>/12</span>
+		</div>
+	</div>
+	<div class="js-tilt-glare">
+		<div class="js-tilt-glare-inner"></div>
+	</div>
+</div>
 
-									<div class="deposit_term">
-										<div class="label">
-											<span>Added</span><span class="cl_white">12/04</span>
-											<span>08:19</span>
-										</div>
-										<div class="days_remain">
-											<span class="days">Days remaining</span> 
-											<span class="cl_red">1</span><span>/12</span>
-										</div>
-									</div>
-									<div class="js-tilt-glare">
-										<div class="js-tilt-glare-inner"></div>
-									</div>
-								</div>
+<div class="active_deposit js-tilt">
+	<div class="deposit_balance">
+
+		<ul class="list-unstyled get_paid">
+
+			<li class="get_paid__el">
+				<div class="amount cl_red">
+					<sup class="currency">$</sup><span>450.00</span>
+				</div>
+				<span class="get_paid__el-title">Active Deposit</span>
+			</li>
+
+			<li class="get_paid__el">
+				<span class="paid_amount">+ $50.52</span>
+				<div class="get_paid__el-flex-wrap">
+					<span class="get_paid__el-title">Credited</span> 
+					<!-- <span class="get_paid__el-revenue">No Revenue On Weekends</span> -->
+					<span class="get_paid__el-revenue">Next - <span class="note_next_profit">11/05 07:05</span></span>
+				</div>
+			</li>
+
+		</ul>
+		
+		<div class="currency_">BTC</div>
+	</div>
+
+	<div class="deposit_line">
+		<div class="deposit_track"></div>
+		<div class="line" style="width:58.333333333333%"></div>
+	</div>
+
+	<div class="deposit_term">
+		<div class="label">
+			<span>Added</span><span class="cl_white">12/04</span>
+			<span>08:19</span>
+		</div>
+		<div class="days_remain">
+			<span class="days">Accruals</span> 
+			<span class="cl_white">1</span><span>/12</span>
+		</div>
+	</div>
+	<div class="js-tilt-glare">
+		<div class="js-tilt-glare-inner"></div>
+	</div>
+</div>
+
+
+
 							</div>
+
+
+							
 
 							<a href="account-invest.html" class="open_deposit js-tilt-little">
 								<span>Open New Deposit</span>
@@ -426,7 +507,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	//= template/scripts.html
-	<script src="libs/tilt.jquery.js"></script>
 	//= template/account-scripts.html
 
 	<script src="libs/account/local/home/home.js"></script>

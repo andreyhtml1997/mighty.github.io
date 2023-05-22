@@ -1,9 +1,85 @@
 .tabs {
   &__header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 70px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0;
+      row-gap: 20px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      row-gap: 10px;
+    }
+    
   }
   &__header-el {
-    &.active {
-
+    height: 52px;
+    text-indent: 1px;
+    // font-weight: 700;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+    position: relative;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not([disabled]){
+      @extend .lightning;
+    }
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: calc(25% - 12px);
+    }
+    @media(max-width: $sm){
+      width: calc(50% - 10px);
+    
+    }
+    @media(max-width: $xs){
+      font-size: 13px;
+      width: calc(50% - 5px);
+    
+    }
+    
+    &:before {
+      border: 1px solid #fd9546;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      border-radius: 10px;
+      content: '';
+      z-index: -1;
+      
+    }
+    &[disabled] {
+      opacity: 0.5;
+    }
+    &.active, &:not([disabled]):hover {
+      background: $gradient1;
+      border: none;
     }
   }
   .tab-content {

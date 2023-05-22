@@ -1,0 +1,18 @@
+.footer {
+  &:after {
+    top: 100%;
+    bottom: -1000px;
+    content: '';
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    background: rgb(25,8,40) !important;
+  }
+}
+
+.footer-link {
+  &:hover {
+    color: white;
+  }
+}

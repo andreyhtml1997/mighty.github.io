@@ -1,6 +1,9 @@
 //= template/html-charset-viewport.html
 	<title>Sign Up</title>
 	//= template/head.html
+	<link rel="stylesheet" href="libs/account/local/home/home.css">
+	<link rel="stylesheet" href="libs/account/style.css">
+	<link rel="stylesheet" href="libs/account/account/account.css">
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="body overflow-hidden">
@@ -13,7 +16,7 @@
 
 		<div class="section legal-header">
 			<div class="container legal-header">
-				<h1 class="h1 alt-h1">Sign Up</h1>
+				<h1 class="h3">Sign Up</h1>
 				<div class="alt-page-line"></div>
 			</div>
 			<div class="bg-noise alt-page"></div>
@@ -26,20 +29,34 @@
 
 							<div class="field">
 								<label class="field__label">Full Name</label>
-								<input type="text" class="text-field w-input" name="fullname" placeholder="Full Name" required>
+								<input type="text" class="text-field w-input" name="fullname" placeholder="Enter your full name (required)" required>
 							</div>
 							<div class="field">
 								<label class="field__label">Username</label>
-								<input type="text" class="text-field w-input" name="username" placeholder="Username" required>
+								<input type="text" class="text-field w-input" name="username" placeholder="Enter your username (required)" required>
 							</div>
 							<div class="field">
 								<label class="field__label">Email</label>
-								<input type="email" class="text-field w-input" name="email" placeholder="Email" required>
+								<input type="email" class="text-field w-input" name="email" placeholder="Enter your email (required)" required>
+							</div>
+							<div class="field password">
+								<label class="field__label">Country:</label>
+								
+								<select class="text-field w-input" required placeholder="Please choose your country" required>
+									<option value="">Please choose your country:</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+									<option value="Country">Country</option>
+								</select>
 							</div>
 							<div class="field password">
 								<label class="field__label">Password</label>
 								<div class="input-container">
-									<input type="password" class="text-field w-input" name="password" placeholder="Password" required>
+									<input type="password" class="text-field w-input" name="password" placeholder="Enter password (required)" required>
 									<div class="password__visibility"></div>
 								</div>
 							</div>
@@ -57,7 +74,7 @@
 									</div>
 								</div>
 							</div>
-							<button data-w-id="1341ed2f-515f-0538-470c-d6b0114f6f69" class="cta---send-link-macos" type="submit">
+							<button class="cta---send-link-macos" type="submit">
 								<!-- <img src="img/Apple_logo_white.png" loading="lazy" height="21" alt="" class="image-3"> -->
 								<div class="div-block-18">
 									<div class="text-block-copy">Create Account</div>
@@ -72,8 +89,8 @@
 							<span class="text-block-3">Forgot password?</span>
 						</a>
 						<a href="login.html" class="link-primary">
-							<div class="text-block-3-copy">Sign In</div>
-							<div class="text-block-3-copy-copy">-&gt;</div>
+							<span class="text-block-3-copy">Sign In</span>
+							<!-- <div class="text-block-3-copy-copy">-&gt;</div> -->
 						</a>
 					</div>
 				</div>

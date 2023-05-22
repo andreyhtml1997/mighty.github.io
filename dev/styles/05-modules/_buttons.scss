@@ -1,9 +1,61 @@
 .btn_bordered {
   line-height: 1;
-  &:not(.show_on_error) {
+  background: $dark;
+  &:not(.show_on_error, .js-copy) {
     @extend .lightning;
     &:hover {
       background: $gradient1;
+      
+      
+
     }
+  }
+  &.js-copy {
+    &:hover {
+      border-color: white;
+    }
+  }
+}
+
+
+
+.btn-border-gradient {
+  border-radius: 10px;
+  min-height: 52px;
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, #c567ff, #fd9546, #fd9546, #c567ff);
+    background-size: 50% 100%;
+  }
+  &__content {
+    background: $dark;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 6px 15px;
+    position: relative;
+    height: 100%;
+    min-height: 48px;
+  }
+  &:hover {
+    &::before {
+      animation: SidebarCreate_rainbowSlide-zxLzf .75s linear infinite
+    }
+  }
+}
+
+@keyframes SidebarCreate_rainbowSlide-zxLzf{
+  to {
+    transform:translateX(-50%)
   }
 }

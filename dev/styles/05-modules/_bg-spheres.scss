@@ -5,6 +5,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
+  background: $dark;
 }
 
 .bg-sphere {
@@ -13,6 +14,7 @@
   display: flex;
   position: absolute;
   z-index: 1;
+  display: none;
   -webkit-animation-name: pulse3;
           animation-name: pulse3;
   -webkit-animation-duration: 6s;
@@ -44,7 +46,7 @@
   }
   
   &--color-main {
-    background: radial-gradient(ellipse at center, rgba(0,125,254,0.2) 0%, rgba(157,78,108,0) 68%, rgba(231,56,39,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 125, 254, 0.2) 0%, rgba(157,78,108,0) 68%, rgba(231,56,39,0) 100%);
     
     //background: url(../img/sphere-main.png) center no-repeat;
     background-size: contain;

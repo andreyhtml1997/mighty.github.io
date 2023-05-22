@@ -1,3 +1,14 @@
+html {
+  background: #120322;
+  &.menu-open {
+    background: rgb(29, 6, 49) !important;
+    body {
+      background: rgb(29, 6, 49) !important;
+    }
+  }
+}
+
+
 * {
   text-decoration: none;
   font-family: $font-main;
@@ -68,7 +79,7 @@
 
 body {
   font-family: Codec-Cold;
-  background: #1c0531;
+  background: #120322;
   // url("../img/bg-lines.svg") center no-repeat
   position: relative;
 }
@@ -101,127 +112,12 @@ body {
 }
 
 
-.ac_page {
-  padding-left: 15px;
-  @media(max-width: $xl){
-  
-  }
-  @media(max-width: $lg){
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @media(max-width: $md){
-    
-  }
-  @media(max-width: $sm){
-  
-  }
-  @media(max-width: $xs){
-  
-  }
-  
-  .breadcrumbs {
 
-  }
-  .breadcrumb {
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-      padding-left: 0;
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-  }
-  &__body {
-    margin-left: 0;
-    margin-right: 0;
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-      padding-left: 0;
-      padding-right: 0;
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-    .r_side {
-      @media(max-width: $xl){
-      
-      }
-      @media(max-width: $lg){
-        padding: 0;
-      }
-      @media(max-width: $md){
-        
-      }
-      @media(max-width: $sm){
-      
-      }
-      @media(max-width: $xs){
-      
-      }
-      
-    }
-  }
-
-  .tabs {
-    &__header {
-      margin-bottom: 16px;
-    }
-    &__header-el {
-      border: 1px solid #555069;
-      height: 40px;
-      transition: all 0.4s;
-      &:before {
-        display: none;
-      }
-      
-      &.active, &:not([disabled]):hover {
-        border: 1px solid white !important;
-        color: $color-secondary;
-        background: transparent !important;
-      }
-    }
-    .border_box {
-      & > .row {
-
-      }
-      .col {
-        
-      }
-      .paginator_content {
-
-      }
-    }
-    .tab-content {
-
-    }
-    .tab-pane {
-
-    }
-  }
-}
 
 
 .input_label, .payout_label, .field_box_ .label_ {
-  color: #dadada;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
 }
 
 .field_box_.filled_ .label_ {
@@ -244,8 +140,15 @@ body {
 }
 
 .head_support {
-  i {
+  i, svg {
     font-size: 22px;
+    position: relative;
+    top: -1px;
+  }
+  .cl_white {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 
@@ -263,6 +166,17 @@ body {
   }
   .line {
     background: $gradient1;
+  }
+  &.check {
+    .deposit_line {
+      display: none;
+    }
+    .deposit_balance {
+      padding-bottom: 1rem;
+    }
+    .deposit_term {
+
+    }
   }
 }
 
@@ -320,4 +234,214 @@ body {
     radial-gradient(circle at bottom, #fff -30%, transparent 70%),
     linear-gradient(to right, #134a8e, #00b6f1 50%),
     #fff; */
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.invest_qr {
+  width: 4rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.input_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trans_amount {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+    //width: 100%;
+  }
+  
+}
+.trans_address {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+    width: 100%;
+  }
+  
+  .input_text {
+    @media(max-width: $xl){
+      max-width: 200px;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+}
+
+.trans_invest {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+
+  @media(max-width: $sm){
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  @media(max-width: $xs){
+  
+  }
+  
+}
+.modal  {
+  display: none;
+}
+
+
+.banner_box_ {
+  &_desktop {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      display: none;
+    }
+    
+  }
+  &_mobile {
+    display: none;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    }
+    @media(max-width: $xs){
+      display: flex;
+    }
+    
+  }
+}
+
+.invest_info {
+  &--padding-md-0 {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding-left: 0;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } 
+}
+
+
+
+.text-block-3-copy {
+  background-image: linear-gradient(90deg, #e83390, #fd9546);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero-section {
+  &__cta {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+
+
+
+.wallet_total {
+  .amount_box {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .reinvest_button {
+    color: $color-secondary;
+    font-size: 1.25rem;
+    animation: reinvestButton 1.5s infinite linear;
+    text-transform: uppercase;
+  }
+}
+
+
+.show_on_ok {
+  display: flex !important;
 }

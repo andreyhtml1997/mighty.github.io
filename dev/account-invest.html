@@ -59,8 +59,8 @@
 												</div>
 											</div>
 
-											<div class="col-auto">
-												<div class="invest_info ps-md-0 ps-sm-0 ps-0">
+											<!-- <div class="col-auto">
+												<div class="invest_info invest_info--padding-md-0">
 													<div class="invest_alert orange">
 														<div class="iconed_text">
 															<div class="text">Reinvest Manual Only!</div>
@@ -75,7 +75,7 @@
 														</div>
 													</div>
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</div>
 
@@ -88,11 +88,17 @@
 													<div class="double_inputs_block">
 														<div class="double_input_one field_box_">
 															<div class="double_icon">$</div>
-															<input type='text' name='amount_fiat' value='12' id='invest_amount_fiat' class='form-control sup_ field_' autocomplete='off'>
+															<input 
+																type='text' 
+																name='amount_fiat' 
+																value='10' 
+																id='invest_amount_fiat' 
+																class='form-control sup_ field_ fan-calculator__input' autocomplete='off'
+															>
 														</div>
 
 														<div class="double_input_two">
-															<div class="double_icon">Min $<span id='invest_min_fiat_small'>12</span></div>
+															<div class="double_icon">Min $<span id='invest_min_fiat_small'>10</span></div>
 
 															<input type='text' name='amount_crypto' value='0.00042528' id='invest_amount_crypto' class="form-control sup_ field_" autocomplete='off'>
 
@@ -112,7 +118,7 @@
 												<div class="invest_info">
 													<div class="input_label">Min / Max</div>
 													<div class="input_text">
-														$<span id='invest_min_fiat'>12</span> -
+														$<span id='invest_min_fiat'>10</span> -
 														<span id='invest_max_fiat'>30K</span>
 													</div>
 												</div>
@@ -135,14 +141,14 @@
 																DAILY
 															</div>
 															
-															<input type='text' value='1.44' id='invest_amount_daily' class='form-control' autocomplete='off'>
+															<input type='text' value='1' id='invest_amount_daily' class='form-control' autocomplete='off'>
 														</div>
 
 														<div class="double_input_two">
 															<div class="double_icon">
 																Total
 															</div>
-															<input type='text' value='17.28' id='invest_amount_total' class="form-control" autocomplete='off'>
+															<input type='text' value='15' id='invest_amount_total' class="form-control" autocomplete='off'>
 														</div>
 
 													</div>
@@ -153,14 +159,25 @@
 									
 									<input type='hidden' id='invest_data' value='eyJwbGFuIjp7IllTRFl1Sk44TzMzVHBDVkVFZWtVRWc9PSI6eyJtaW4iOnsiZmlhdCI6MTJ9LCJtYXgiOnsiZmlhdCI6MzAwMDB9fX0sImN1cnJlbmN5Ijp7IllTRFl1Sk44TzMzVHBDVkVFZWtVRWc9PSI6eyJjb2RlIjp7ImNyeXB0byI6IkJUQyIsImZpYXQiOiJVU0QifSwic3ltYm9sIjp7ImNyeXB0byI6Ilx1MjBiZiIsImZpYXQiOiIkIn0sInJhdGUiOnsic3RyYWlnaHQiOiIwLjAwMDAzNTQ0IiwicmV2ZXJzZSI6MjgyMTYuNzA0Mjg4OTM5MDU0fSwiZGVjaW1hbCI6eyJjcnlwdG8iOiI4IiwiZmlhdCI6IjIifX0sIlRqcTZoTG1aWXd0N2VZZWRodzNXQWc9PSI6eyJjb2RlIjp7ImNyeXB0byI6IlVTRFQiLCJmaWF0IjoiVVNEIn0sInN5bWJvbCI6eyJjcnlwdG8iOiIkIiwiZmlhdCI6IiQifSwicmF0ZSI6eyJzdHJhaWdodCI6IjEiLCJyZXZlcnNlIjoxfSwiZGVjaW1hbCI6eyJjcnlwdG8iOiIyIiwiZmlhdCI6IjIifX0sImJ1Z3JnTVJaVkVjMVdKOVVmcXhMN3c9PSI6eyJjb2RlIjp7ImNyeXB0byI6IlRSWCIsImZpYXQiOiJVU0QifSwic3ltYm9sIjp7ImNyeXB0byI6IlQiLCJmaWF0IjoiJCJ9LCJyYXRlIjp7InN0cmFpZ2h0IjoiMTUuMTc5MSIsInJldmVyc2UiOjAuMDY1ODgwMDU4NzY1MDEyNDJ9LCJkZWNpbWFsIjp7ImNyeXB0byI6IjYiLCJmaWF0IjoiMiJ9fX19'>
 									
-									<button type="submit" class="btn_bordered raise" name='send' value='1'>
+									<!-- <button type="submit" class="btn_bordered raise" name='send' value='1'>
 										<span class="iconed_text">
 											<span class="text">Proceed to the payment</span>
 											<span class="icon_width">
 												<img src="img/account/btn-arrow-right.png" alt="Icon">
 											</span>
 										</span>
-									</button>
+									</button> -->
+									<!-- ПОСТАВИЛ ВРЕМЕННО <A HREF> ДЛЯ ДЕМОНТРАЦИИ ПЕРЕХОДА МЕЖДУ СТРАНИЦАМИ -->
+									<div class="d-flex">
+										<a class="btn_bordered raise" href="account-invest-new.html">
+											<span class="iconed_text">
+												<span class="text">Proceed to the payment</span>
+												<span class="icon_width">
+													<img src="img/account/btn-arrow-right.png" alt="Icon">
+												</span>
+											</span>
+										</a>
+									</div>
 
 								</div>
 							</form>

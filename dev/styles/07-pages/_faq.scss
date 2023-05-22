@@ -6,45 +6,45 @@
     .tabs__header {
       justify-content: center;
       @media(max-width: $xl){
-      
+    
       }
       @media(max-width: $lg){
       
       }
       @media(max-width: $md){
+        flex-wrap: wrap;
         justify-content: space-between;
+        gap: 0;
+        row-gap: 20px;
       }
       @media(max-width: $sm){
       
       }
       @media(max-width: $xs){
+        row-gap: 10px;
+      }
+    }
+    .tabs__header-el {
+      height: 52px;
+      @media(max-width: $md){
+        width: calc(25% - 12px);
+      }
+      @media(max-width: $sm){
+        width: calc(50% - 10px);
       
       }
-      
+      @media(max-width: $xs){
+        font-size: 13px;
+        width: calc(50% - 5px);
+        height: 38px;
+      }
     }
   }
   &__header {
     display: flex;
     gap: 16px;
-    margin-bottom: 36px;
-    @media(max-width: $xl){
+    margin-bottom: 70px;
     
-    }
-    @media(max-width: $lg){
-    
-    }
-    @media(max-width: $md){
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0;
-      row-gap: 20px;
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-      row-gap: 10px;
-    }
     
   }
   &__header-el {
@@ -70,20 +70,17 @@
     
     }
     @media(max-width: $md){
-      width: calc(25% - 12px);
+     
     }
     @media(max-width: $sm){
-      width: calc(50% - 10px);
-    
+      
     }
     @media(max-width: $xs){
-      font-size: 14px;
-      width: calc(50% - 5px);
-    
+     
     }
     
     &:before {
-      border: 2px solid #fd9546;
+      border: 1px solid #fd9546;
       top: 0;
       bottom: 0;
       left: 0;
@@ -116,17 +113,16 @@
   .tab-pane {
 
   }
-  $gap: 50px;
   .accordion {
     display: flex;
     flex-wrap: wrap;
-    gap: $gap;
+    gap: 60px;
     align-items: flex-start;
     &__col {
-      width: calc((100% - $gap)/2);
+      width: calc((100% - 60px)/2);
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      gap: 60px;
       @media(max-width: $xl){
       
       }
@@ -149,6 +145,7 @@
   .accordion-item {
     width: 100%;
     margin: 0 0 auto;
+    border: none;
   }
   .accordion-item {
     background: none;
@@ -160,14 +157,28 @@
   .accordion-button {
     color: white;
     background: none;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: none !important;
     align-items: flex-start;
     justify-content: space-between;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    &:before {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      content: '';
+      background: $gradient3;
+      height: 1px;
+      
+    }
     @media(max-width: $sm) {
-      font-size: 16px;
+      font-size: 15px;
     }
     &:after {
       background: white;
@@ -229,7 +240,7 @@
   .accordion-body {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 0;
+    padding-top: 15px;
     text-align: justify;
   }
 }
