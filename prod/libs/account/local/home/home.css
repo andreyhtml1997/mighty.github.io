@@ -557,13 +557,11 @@
 }
 .overview_box ul.team_deposited li:nth-child(4) a {
   padding-top: 0.3125rem;
-  height: 5.5rem;
-  border: 1px solid #aa08ee;
+  height: 3.7rem;
 }
 .overview_box ul.team_deposited li:nth-child(4) a:hover {
-  animation: pulse-violet 0.75s;
-  box-shadow: 0 0 0 2em transparent;
   color: #fff;
+  opacity: 0.6;
 }
 .currency_ {
   color: #c5c5c5;
