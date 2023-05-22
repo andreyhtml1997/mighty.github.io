@@ -179,7 +179,7 @@ function updateForm () {
 		$("#withdraw_amount_fiat").val (toDec (amountFiat, $coin.decimal.fiat));
 		$("#withdraw_amount_crypto").val (toDec (amountCrypto, $coin.decimal.crypto));
 		$("#withdraw_method_name").html ($coin.coinname.crypto);
-		$("#withdraw_wallet").html ($coin.wallet);
+		// $("#withdraw_wallet").html ($coin.wallet);
 		
 		if (amountFiat >= 1000) {
 			index = 4;

@@ -124,7 +124,28 @@
       width: 100%;
     }
   }
-  
+  &.country {
+    .text-field {
+      padding: 0 !important;
+      .jq-selectbox__select {
+        font-size: 16px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+      }
+    }
+    .jq-selectbox li {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      font-size: 16px;
+    }
+    .jq-selectbox.focused .jq-selectbox__select {
+      background: transparent !important;
+    }
+  }
 }
 .text-field {
   min-height: 52px;

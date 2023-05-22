@@ -50,7 +50,12 @@
 }
 .withdraw_date {
 	padding: 1.125rem 2.8125rem;
-	width: 33.75rem;
+	width: 26.75rem;
+}
+@media(max-width: 991px) {
+	.withdraw_date {
+		width: 33.75rem;
+	}
 }
 .withdraw_wallet {
 	padding: 1.125rem 2.8125rem;
@@ -112,10 +117,16 @@
 	}
 	.pincode_item,
 	.withdraw_confirm {
-		max-width: 101.333rem;
+		max-width: 78.667rem;
 	}
 	.inputs_width {
     max-width: 101.333rem;
+	}
+}
+@media(max-width: 991px) {
+	.pincode_item,
+	.withdraw_confirm {
+		max-width: 101.333rem;
 	}
 }
 @media screen and (min-width: 992px) {

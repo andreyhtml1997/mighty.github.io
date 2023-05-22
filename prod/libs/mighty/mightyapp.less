@@ -4027,6 +4027,45 @@ a {
       width: 20px;
     }
   }
+  &--bordered {
+    border: 1px solid #f15f6f;
+    border-radius: 10px;
+    i {
+   
+    
+      background-image: linear-gradient(90deg, #f15f6f, #f15f6f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    svg {
+      path {
+        fill: #f15f6f;
+      }
+    }
+
+
+
+    &:hover {
+      background-clip: border-box !important;
+      background: linear-gradient(90deg, #e83390, #fd9546) !important;
+      color: white !important;
+      -webkit-text-fill-color: white !important;
+      i {
+   
+    
+        background-image: linear-gradient(90deg, white, white) !important;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      svg {
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
 }
 @media(max-width: 1280px) {
 
@@ -8199,3 +8238,7 @@ a.nav-link.w--current {
     transform: translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
   }
 }
+
+
+
+

@@ -454,6 +454,7 @@ a.logout_link:hover {
   line-height: 1;
   margin-left: 0;
   display: flex;
+	font-size: 1.75rem;
 }
 .page-link:hover {
   background-color: transparent;

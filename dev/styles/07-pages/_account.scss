@@ -111,19 +111,22 @@
     }
     &__header-el {
       border: 1px solid #555069;
-      min-height: 3.5rem;
+      min-height: 3rem;
       height: auto;
       transition: all 0.3s;
       font-size: 1.4rem;
       text-transform: uppercase;
-      border: none;
-      padding: 0;
+      //border: none;
+      padding: 0.8rem 1rem 0.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
       &:before, &:after {
         display: none !important;
       }
       
       &.active, &:not([disabled]):hover {
-        // border: 1px solid white !important;
+        border: 1px solid #fd9546 !important;
         color: $color-secondary;
         background: transparent !important;
       }

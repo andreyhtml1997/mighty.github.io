@@ -4030,6 +4030,34 @@ a {
     width: 20px;
   }
 }
+.nav-link--bordered {
+  border: 1px solid #f15f6f;
+  border-radius: 10px;
+}
+.nav-link--bordered i {
+  background-image: linear-gradient(90deg, #f15f6f, #f15f6f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link--bordered svg path {
+  fill: #f15f6f;
+}
+.nav-link--bordered:hover {
+  background-clip: border-box !important;
+  background: linear-gradient(90deg, #e83390, #fd9546) !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+.nav-link--bordered:hover i {
+  background-image: linear-gradient(90deg, white, white) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link--bordered:hover svg path {
+  fill: white !important;
+}
 .nav-link.w--current,
 .nav-link:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#e83390), to(#fd9546));

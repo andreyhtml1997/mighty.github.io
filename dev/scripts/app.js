@@ -91,6 +91,22 @@ window.onload = function () {
       }
     });
   }
+
+
+  if(document.querySelector('.simple-select')) {
+    $('.simple-select').styler({
+      selectSearch:true,
+      onFormStyled:function () {
+        $(".simple-select .jq-selectbox__select").each (function () {
+          var $this = $(this);
+          var $select = $this.prev ();
+          $this.attr ("field_name", $select.attr ("name"));
+        })
+      }
+    });
+  }
+
+  
 };
 
 window.onscroll = function (e) {
